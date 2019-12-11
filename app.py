@@ -83,4 +83,4 @@ if __name__ == '__main__':
 
     # AWS에 배포할 때에는 application.debug를 False로 바꿀 것
     application.debug = True
-    application.run(host="localhost", port="8000")
+    application.run(host="0.0.0.0", port="8000")

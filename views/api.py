@@ -18,14 +18,14 @@ def api_main():
 
     url = 'http://apis.data.go.kr/1320000/LostGoodsInfoInqireService/getLostGoodsInfoAccTpNmCstdyPlace'
 
-    # params를 딕셔너리로 주면 서비스키 인코딩 문제 발생
-    response_xml = requests.get(
+    # params를 딕셔너리로 주면 서비스키 인코딩 문제 발생 (& -> %25)
+    res_lost_goods = requests.get(
         url=url,
         params='ServiceKey={0}'.format(service_key)
         + '&LST_PLACE={0}&LST_PRDT_NM={1}'.format('', '지갑')
         + '&pageNo={0}&numOfRows={1}'.format(1, 10)
     )
-    response_dict = xmltodict.parse(response_xml.text)
+    response_dict = xmltodict.parse(res_lost_goods.text, encoding=None)
     response_json = json.dumps(response_dict)
     results = json.loads(response_json)
 
