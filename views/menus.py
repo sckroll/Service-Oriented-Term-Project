@@ -1,8 +1,8 @@
 from flask import Blueprint, render_template
 import requests
 import pprint
+from keys import KAKAO_REST_KEY
 
-KAKAO_REST_KEY = '8b3cbc05e88eedd88a6d77baf2b9ce69'
 KAKAO_BASE_URL = 'https://dapi.kakao.com'
 headers = {'Authorization': 'KakaoAK ' + KAKAO_REST_KEY}
 
