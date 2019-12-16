@@ -17,7 +17,7 @@
 """
 
 
-from flask import Blueprint, json, request
+from flask import Blueprint, json, request, make_response
 from views.code_converter import location_to_code, category_to_code
 import requests
 import xmltodict
@@ -54,46 +54,6 @@ portal_detail_url = host_url + portal_end_point + '/getPtLosfundDetailInfo'
 # 분실물 / 습득물 목록 건수 디폴트값
 LOST_NUM_OF_ROWS = 10
 FOUND_NUM_OF_ROWS = 10
-
-
-# 해당 URL에 파라미터와 함께 요청을 보냈을 때 XML로 받은 결과를 JSON으로 변환하는 메소드
-def get_response_and_convert(url, params):
-    # params를 딕셔너리로 주면 서비스키 인코딩 문제 발생 (& -> %25)
-    # 따라서 쿼리스트링에 파라미터를 연결하여 전달해야 함
-    # xml 파싱 후 json 변환을 한번 거치고 딕셔너리로 변환해야
-    # 파싱 데이터 내의 불필요한 요소를 제거할 수 있음
-
-    querystring = 'ServiceKey={0}'.format(service_key)
-    for key, val in params.items():
-        if val is not None:
-            querystring += '&{0}={1}'.format(key, val)
-
-    response = requests.get(
-        url=url,
-        params=querystring
-    )
-    res_dict = xmltodict.parse(response.text)
-    res_json = json.loads(json.dumps(res_dict))
-
-    if 'response' in res_json.keys():
-        res_item = res_json['response']['body']
-    else:
-        return None
-
-    print(res_item)
-    if 'items' in res_item.keys():
-        if res_item['items'] is not None:
-            # 반환 값이 리스트이면 리스트를 리턴, 리스트가 아니면 리스트로 만들어 리턴
-            if type(res_item['items']['item']) == list:
-                return res_item['items']['item']
-            else:
-                return [res_item['items']['item']]
-        else:
-            return None
-    elif 'item' in res_item.keys():
-        return res_item['item']
-    else:
-        return None
 
 
 # 기능 1. 분실물을 물품명이나 분실 장소, 물품 종류나 신고 날짜로 검색 시
@@ -149,7 +109,7 @@ def lost_search():
         'lostPageNo': params['pageNo'],
         'lostNumOfRows': params['numOfRows']
     }
-    
+
     # 습득물 목록 건수 파라미터가 있으면 객체 저장, 없으면 디폴트값을 객체에 저장
     if request.args.get('maxFoundNumOfRows') is not None:
         result['maxFoundNumOfRows'] = request.args.get('maxFoundNumOfRows')
@@ -266,7 +226,7 @@ def lost_search():
         max_candidate_num = int(result['maxFoundNumOfRows'])
 
         # 경찰서 습득물 조회
-        print('다음으로 검색:', params_found['PRDT_NM'])
+        #print('다음으로 검색:', params_found['PRDT_NM'])
         page_no = 1
         while True:
             if max_candidate_num == 0:
@@ -278,39 +238,20 @@ def lost_search():
                 break
 
             for candidate in candidates:
-                if 'fdYmd' in candidate.keys():
-                    # 물품분류명을 상위분류명과 하위분류명으로 분리
-                    product_category = candidate['prdtClNm'].split(' > ')
-
-                    # 습득물에 대해 이름을 부여, 분실물에 해당하는 예상 습득물 리스트에 추가
-                    matched_goods = {
-                        'id': candidate['atcId'],
-                        'depPlace': candidate['depPlace'],
-                        'image': candidate['fdFilePathImg'],
-                        'foundProductName': candidate['fdPrdtNm'],
-                        'foundSubject': candidate['fdSbjt'],
-                        'productCategory': product_category[0],
-                        'productCategorySub': product_category[1],
-                    }
+                if 'fdYmd' not in candidate.keys():
+                    # 습득물 상세정보 리스트 아이템 객체
+                    matched_goods = get_found_item(candidate, found_detail_url)
+                    if matched_goods is None:
+                        matched_goods = get_found_item(candidate, None)
 
                     lost_goods_result['predictedItems'].append(matched_goods)
                     max_candidate_num -= 1
                 else:
                     if int(candidate['fdYmd'].replace('-', '')) >= int(lost_goods_result['lostYMD'].replace('-', '')):
-                        # 물품분류명을 상위분류명과 하위분류명으로 분리
-                        product_category = candidate['prdtClNm'].split(' > ')
-
-                        # 습득물에 대해 이름을 부여, 분실물에 해당하는 예상 습득물 리스트에 추가
-                        matched_goods = {
-                                'id': candidate['atcId'],
-                                'depPlace': candidate['depPlace'],
-                                'image': candidate['fdFilePathImg'],
-                                'foundProductName': candidate['fdPrdtNm'],
-                                'foundSubject': candidate['fdSbjt'],
-                                'foundYMD': candidate['fdYmd'],
-                                'productCategory': product_category[0],
-                                'productCategorySub': product_category[1],
-                        }
+                        # 습득물 상세정보 리스트 아이템 객체
+                        matched_goods = get_found_item(candidate, found_detail_url)
+                        if matched_goods is None:
+                            matched_goods = get_found_item(candidate, None)
 
                         lost_goods_result['predictedItems'].append(matched_goods)
                         max_candidate_num -= 1
@@ -333,39 +274,20 @@ def lost_search():
                 break
 
             for candidate in candidates:
-                if 'fdYmd' in candidate.keys():
-                    # 물품분류명을 상위분류명과 하위분류명으로 분리
-                    product_category = candidate['prdtClNm'].split(' > ')
-
-                    # 습득물에 대해 이름을 부여, 분실물에 해당하는 예상 습득물 리스트에 추가
-                    matched_goods = {
-                        'id': candidate['atcId'],
-                        'depPlace': candidate['depPlace'],
-                        'image': candidate['fdFilePathImg'],
-                        'foundProductName': candidate['fdPrdtNm'],
-                        'foundSubject': candidate['fdSbjt'],
-                        'productCategory': product_category[0],
-                        'productCategorySub': product_category[1],
-                    }
+                if 'fdYmd' not in candidate.keys():
+                    # 습득물 상세정보 리스트 아이템 객체
+                    matched_goods = get_found_item(candidate, portal_detail_url)
+                    if matched_goods is None:
+                        matched_goods = get_found_item(candidate, None)
 
                     lost_goods_result['predictedItems'].append(matched_goods)
                     max_candidate_num -= 1
                 else:
                     if int(candidate['fdYmd'].replace('-', '')) >= int(lost_goods_result['lostYMD'].replace('-', '')):
-                        # 물품분류명을 상위분류명과 하위분류명으로 분리
-                        product_category = candidate['prdtClNm'].split(' > ')
-
-                        # 습득물에 대해 이름을 부여, 분실물에 해당하는 예상 습득물 리스트에 추가
-                        matched_goods = {
-                                'id': candidate['atcId'],
-                                'depPlace': candidate['depPlace'],
-                                'image': candidate['fdFilePathImg'],
-                                'foundProductName': candidate['fdPrdtNm'],
-                                'foundSubject': candidate['fdSbjt'],
-                                'foundYMD': candidate['fdYmd'],
-                                'productCategory': product_category[0],
-                                'productCategorySub': product_category[1],
-                        }
+                        # 습득물 상세정보 리스트 아이템 객체
+                        matched_goods = get_found_item(candidate, portal_detail_url)
+                        if matched_goods is None:
+                            matched_goods = get_found_item(candidate, None)
 
                         lost_goods_result['predictedItems'].append(matched_goods)
                         max_candidate_num -= 1
@@ -384,8 +306,11 @@ def lost_search():
 
     # jsonify()로 리턴하면 한글이 유니코드 문자열로 변환되어서 출력됨
     # https://soooprmx.com/archives/6788
-    # return jsonify(res_json)
-    return json.dumps(result, ensure_ascii=False)
+    #return jsonify(result)
+    #return json.dumps(result, ensure_ascii=False)
+    response = make_response(json.dumps(result, ensure_ascii=False))
+    response.headers['Content-Type'] = 'application/json;charset=UTF-8'
+    return response
 
 
 # 기능 2. 습득물을 물품명이나 습득 장소로 검색 시
@@ -434,9 +359,12 @@ def found_search():
 
     # 최종적으로 출력할 JSON
     result = {
-        'items': [],
+        'foundItems': [],
+        'portalItems': [],
         'foundPageNo': params['pageNo'],
-        'foundNumOfRows': params['numOfRows']
+        'foundNumOfRows': params['numOfRows'],
+        'portalPageNo': params['pageNo'],
+        'portalNumOfRows': params['numOfRows']
     }
 
     # 습득물 리스트 (경찰서, 포털기관)
@@ -467,7 +395,7 @@ def found_search():
             # 단, 여기서 numOfRows는 1000으로 고정한다. (디폴트값인 10으로 유지하면 속도 감소)
 
             page_no = 1
-            max_candidate_num = int(params['numOfRows'])
+            max_found_candidate_num = max_portal_candidate_num = int(params['numOfRows'])
             params['numOfRows'] = 1000
             while True:
                 params['pageNo'] = page_no
@@ -481,19 +409,49 @@ def found_search():
                         if params['DEP_PLACE'] in candidate['depPlace'] \
                                 and params['PRDT_NM'] in candidate['fdPrdtNm']:
                             found_goods_list.append(candidate)
-                            max_candidate_num -= 1
+                            max_found_candidate_num -= 1
                     elif 'DEP_PLACE' in params.keys():
                         if params['DEP_PLACE'] in candidate['depPlace']:
                             found_goods_list.append(candidate)
-                            max_candidate_num -= 1
+                            max_found_candidate_num -= 1
                     elif 'PRDT_NM' in params.keys():
                         if params['PRDT_NM'] in candidate['fdPrdtNm']:
                             found_goods_list.append(candidate)
-                            max_candidate_num -= 1
+                            max_found_candidate_num -= 1
 
-                    if max_candidate_num == 0:
+                    if max_found_candidate_num == 0:
                         break
-                if max_candidate_num == 0:
+                if max_found_candidate_num == 0:
+                    break
+                else:
+                    page_no += 1
+
+            page_no = 1
+            while True:
+                params['pageNo'] = page_no
+                candidates = get_response_and_convert(portal_search_cd_url, params)
+                if candidates is None:
+                    break
+
+                for candidate in candidates:
+                    # 파라미터 존재 여부에 따라 습득물의 해당 파라미터와 일치하는지 검사
+                    if 'DEP_PLACE' in params.keys() and 'PRDT_NM' in params.keys():
+                        if params['DEP_PLACE'] in candidate['depPlace'] \
+                                and params['PRDT_NM'] in candidate['fdPrdtNm']:
+                            portal_goods_list.append(candidate)
+                            max_portal_candidate_num -= 1
+                    elif 'DEP_PLACE' in params.keys():
+                        if params['DEP_PLACE'] in candidate['depPlace']:
+                            portal_goods_list.append(candidate)
+                            max_portal_candidate_num -= 1
+                    elif 'PRDT_NM' in params.keys():
+                        if params['PRDT_NM'] in candidate['fdPrdtNm']:
+                            portal_goods_list.append(candidate)
+                            max_portal_candidate_num -= 1
+
+                    if max_portal_candidate_num == 0:
+                        break
+                if max_portal_candidate_num == 0:
                     break
                 else:
                     page_no += 1
@@ -504,42 +462,144 @@ def found_search():
 
     # 각 습득물의 상세정보를 리스트에 저장
     for item in found_goods_list:
-        params_id = {
-            'ATC_ID': item['atcId'],
-            'FD_SN': 1
-        }
+        # 습득물 상세정보 리스트 아이템 객체
+        found_goods_result = get_found_item(item, found_detail_url)
 
-        # 습득물 리스트의 상세정보를 요청
-        details_result = get_response_and_convert(found_detail_url, params_id)
-
-        # 물품분류명을 상위분류명과 하위분류명으로 분리
-        product_category = details_result['prdtClNm'].split(' > ')
-
-        # 분실물 상세정보 리스트 아이템 객체
-        found_goods_result = {
-            'id': details_result['atcId'],
-            'state': details_result['csteSteNm'],
-            'depPlace': details_result['depPlace'],
-            'image': details_result['fdFilePathImg'],
-            'foundHour': details_result['fdHor'],
-            'foundPlace': details_result['fdPlace'],
-            'foundProductName': details_result['fdPrdtNm'],
-            'foundSeq': details_result['fdSn'],
-            'foundYMD': details_result['fdYmd'],
-            'foundKeepOrgCategoryName': details_result['fndKeepOrgnSeNm'],
-            'orgId': details_result['orgId'],
-            'orgName': details_result['orgNm'],
-            'productCategory': product_category[0],
-            'productCategorySub': product_category[1],
-            'tel': details_result['tel'],
-            'uniq': details_result['uniq']
-        }
-
-        result['items'].append(found_goods_result)
+        result['foundItems'].append(found_goods_result)
         num_of_item += 1
 
     # 리스트 아이템 개수가 foundNumOfRows보다 작다면 foundNumOfRows 갱신
     if num_of_item < int(result['foundNumOfRows']):
         result['foundNumOfRows'] = num_of_item
 
-    return json.dumps(result, ensure_ascii=False)
+    num_of_item = 0
+
+    # 각 습득물의 상세정보를 리스트에 저장
+    for item in portal_goods_list:
+        # 습득물 상세정보 리스트 아이템 객체
+        found_goods_result = get_found_item(item, portal_detail_url)
+
+        result['portalItems'].append(found_goods_result)
+        num_of_item += 1
+
+    # 리스트 아이템 개수가 portalNumOfRows보다 작다면 portalNumOfRows 갱신
+    if num_of_item < int(result['portalNumOfRows']):
+        result['portalNumOfRows'] = num_of_item
+
+    #return json.dumps(result, ensure_ascii=False)
+    response = make_response(json.dumps(result, ensure_ascii=False))
+    response.headers['Content-Type'] = 'application/json;charset=UTF-8'
+    return response
+
+
+# 해당 URL에 파라미터와 함께 요청을 보냈을 때 XML로 받은 결과를 JSON으로 변환하는 메소드
+def get_response_and_convert(url, params):
+    # params를 딕셔너리로 주면 서비스키 인코딩 문제 발생 (& -> %25)
+    # 따라서 쿼리스트링에 파라미터를 연결하여 전달해야 함
+    querystring = 'ServiceKey={0}'.format(service_key)
+    for key, val in params.items():
+        if val is not None:
+            querystring += '&{0}={1}'.format(key, val)
+
+    # xml 파싱 후 json 변환을 한번 거치고 딕셔너리로 변환해야
+    # 파싱 데이터 내의 불필요한 요소를 제거할 수 있음
+    response = requests.get(
+        url=url,
+        params=querystring
+    )
+    res_dict = xmltodict.parse(response.text)
+    res_json = json.loads(json.dumps(res_dict))
+
+    # 'response' 속성이 없는 경우(에러) None 리턴
+    if 'response' in res_json.keys():
+        res_item = res_json['response']['body']
+    else:
+        return None
+
+    #print(res_item)
+    if res_item is None:
+        return None
+
+    # 가지고 있는 속성에 따라 적절하게 리스트 반환
+    if 'items' in res_item.keys():
+        if res_item['items'] is not None:
+            # 반환 값이 리스트이면 리스트를 리턴, 리스트가 아니면 리스트로 만들어 리턴
+            if type(res_item['items']['item']) == list:
+                return res_item['items']['item']
+            else:
+                return [res_item['items']['item']]
+        else:
+            return None
+    elif 'item' in res_item.keys():
+        return res_item['item']
+    else:
+        return None
+
+
+# 습득물의 상세정보 리스트 아이템 객체를 반환하는 메소드
+def get_found_item(item, url):
+    result_obj = {}
+
+    params_id = {
+        'ATC_ID': item['atcId'],
+        'FD_SN': 1
+    }
+
+    # 습득물 리스트의 상세정보를 요청
+    if url is None:
+        details_result = item
+    else:
+        details_result = get_response_and_convert(url, params_id)
+        if details_result is None:
+            return None
+
+    # 각 속성의 존재 여부를 확인 후 리스트 아이템 객체에 추가
+    if 'atcId' in details_result.keys():
+        result_obj['id'] = details_result['atcId']
+
+    if 'csteSteNm' in details_result.keys():
+        result_obj['state'] = details_result['csteSteNm']
+
+    if 'depPlace' in details_result.keys():
+        result_obj['depPlace'] = details_result['depPlace']
+
+    if 'fdFilePathImg' in details_result.keys():
+        result_obj['image'] = details_result['fdFilePathImg']
+
+    if 'fdHor' in details_result.keys():
+        result_obj['foundHour'] = details_result['fdHor']
+
+    if 'fdPlace' in details_result.keys():
+        result_obj['foundPlace'] = details_result['fdPlace']
+
+    if 'fdPrdtNm' in details_result.keys():
+        result_obj['foundProductName'] = details_result['fdPrdtNm']
+
+    if 'fdSn' in details_result.keys():
+        result_obj['foundSeq'] = details_result['fdSn']
+
+    if 'fdYmd' in details_result.keys():
+        result_obj['foundYMD'] = details_result['fdYmd']
+
+    if 'fndKeepOrgnSeNm' in details_result.keys():
+        result_obj['foundKeepOrgCategoryName'] = details_result['fndKeepOrgnSeNm']
+
+    if 'orgId' in details_result.keys():
+        result_obj['orgId'] = details_result['orgId']
+
+    if 'orgNm' in details_result.keys():
+        result_obj['orgName'] = details_result['orgNm']
+
+    if 'tel' in details_result.keys():
+        result_obj['tel'] = details_result['tel']
+
+    if 'uniq' in details_result.keys():
+        result_obj['uniq'] = details_result['uniq']
+
+    if 'prdtClNm' in details_result.keys():
+        # 물품분류명을 상위분류명과 하위분류명으로 분리
+        product_category = details_result['prdtClNm'].split(' > ')
+        result_obj['productCategory'] = product_category[0]
+        result_obj['productCategorySub'] = product_category[1]
+
+    return result_obj

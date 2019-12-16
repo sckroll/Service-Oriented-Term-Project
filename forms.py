@@ -35,3 +35,13 @@ class MyPageUserForm(FlaskForm):
     affiliation = f.StringField('소속', validators=[DataRequired()])
 
     display = ['email', 'password', 'name', 'affiliation']
+
+
+class LostData(FlaskForm):
+    LostName = f.StringField('LostName', validators=[DataRequired()])
+    LostStartDate = f.StringField('StartDate', validators=[DataRequired()])
+    LostEndDate = f.StringField('EndDate', validators=[DataRequired()])
+    LostRange = f.StringField('LostRange', validators=[DataRequired()])
+    LostPlace = f.StringField('LostPlace', validators=[DataRequired()])
+
+    display = ['LostName', 'LostStartDate', LostEndDate, 'LostRange', 'LostPlace']
