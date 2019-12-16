@@ -23,7 +23,6 @@ import requests
 import xmltodict
 from keys import OPEN_API_SERVICE_KEY
 
-
 # 블루프린트 등록
 api_blueprint = Blueprint('api', __name__)
 
@@ -279,24 +278,42 @@ def lost_search():
                 break
 
             for candidate in candidates:
-                if int(candidate['fdYmd'].replace('-', '')) >= int(lost_goods_result['lostYMD'].replace('-', '')):
+                if 'fdYmd' in candidate.keys():
                     # 물품분류명을 상위분류명과 하위분류명으로 분리
                     product_category = candidate['prdtClNm'].split(' > ')
 
                     # 습득물에 대해 이름을 부여, 분실물에 해당하는 예상 습득물 리스트에 추가
                     matched_goods = {
-                            'id': candidate['atcId'],
-                            'depPlace': candidate['depPlace'],
-                            'image': candidate['fdFilePathImg'],
-                            'foundProductName': candidate['fdPrdtNm'],
-                            'foundSubject': candidate['fdSbjt'],
-                            'foundYMD': candidate['fdYmd'],
-                            'productCategory': product_category[0],
-                            'productCategorySub': product_category[1],
+                        'id': candidate['atcId'],
+                        'depPlace': candidate['depPlace'],
+                        'image': candidate['fdFilePathImg'],
+                        'foundProductName': candidate['fdPrdtNm'],
+                        'foundSubject': candidate['fdSbjt'],
+                        'productCategory': product_category[0],
+                        'productCategorySub': product_category[1],
                     }
 
                     lost_goods_result['predictedItems'].append(matched_goods)
                     max_candidate_num -= 1
+                else:
+                    if int(candidate['fdYmd'].replace('-', '')) >= int(lost_goods_result['lostYMD'].replace('-', '')):
+                        # 물품분류명을 상위분류명과 하위분류명으로 분리
+                        product_category = candidate['prdtClNm'].split(' > ')
+
+                        # 습득물에 대해 이름을 부여, 분실물에 해당하는 예상 습득물 리스트에 추가
+                        matched_goods = {
+                                'id': candidate['atcId'],
+                                'depPlace': candidate['depPlace'],
+                                'image': candidate['fdFilePathImg'],
+                                'foundProductName': candidate['fdPrdtNm'],
+                                'foundSubject': candidate['fdSbjt'],
+                                'foundYMD': candidate['fdYmd'],
+                                'productCategory': product_category[0],
+                                'productCategorySub': product_category[1],
+                        }
+
+                        lost_goods_result['predictedItems'].append(matched_goods)
+                        max_candidate_num -= 1
 
                 if max_candidate_num == 0:
                     break
@@ -316,24 +333,42 @@ def lost_search():
                 break
 
             for candidate in candidates:
-                if int(candidate['fdYmd'].replace('-', '')) >= int(lost_goods_result['lostYMD'].replace('-', '')):
+                if 'fdYmd' in candidate.keys():
                     # 물품분류명을 상위분류명과 하위분류명으로 분리
                     product_category = candidate['prdtClNm'].split(' > ')
 
                     # 습득물에 대해 이름을 부여, 분실물에 해당하는 예상 습득물 리스트에 추가
                     matched_goods = {
-                            'id': candidate['atcId'],
-                            'depPlace': candidate['depPlace'],
-                            'image': candidate['fdFilePathImg'],
-                            'foundProductName': candidate['fdPrdtNm'],
-                            'foundSubject': candidate['fdSbjt'],
-                            'foundYMD': candidate['fdYmd'],
-                            'productCategory': product_category[0],
-                            'productCategorySub': product_category[1],
+                        'id': candidate['atcId'],
+                        'depPlace': candidate['depPlace'],
+                        'image': candidate['fdFilePathImg'],
+                        'foundProductName': candidate['fdPrdtNm'],
+                        'foundSubject': candidate['fdSbjt'],
+                        'productCategory': product_category[0],
+                        'productCategorySub': product_category[1],
                     }
 
                     lost_goods_result['predictedItems'].append(matched_goods)
                     max_candidate_num -= 1
+                else:
+                    if int(candidate['fdYmd'].replace('-', '')) >= int(lost_goods_result['lostYMD'].replace('-', '')):
+                        # 물품분류명을 상위분류명과 하위분류명으로 분리
+                        product_category = candidate['prdtClNm'].split(' > ')
+
+                        # 습득물에 대해 이름을 부여, 분실물에 해당하는 예상 습득물 리스트에 추가
+                        matched_goods = {
+                                'id': candidate['atcId'],
+                                'depPlace': candidate['depPlace'],
+                                'image': candidate['fdFilePathImg'],
+                                'foundProductName': candidate['fdPrdtNm'],
+                                'foundSubject': candidate['fdSbjt'],
+                                'foundYMD': candidate['fdYmd'],
+                                'productCategory': product_category[0],
+                                'productCategorySub': product_category[1],
+                        }
+
+                        lost_goods_result['predictedItems'].append(matched_goods)
+                        max_candidate_num -= 1
 
                 if max_candidate_num == 0:
                     break
