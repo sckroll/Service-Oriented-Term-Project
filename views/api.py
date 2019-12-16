@@ -247,27 +247,56 @@ def lost_search():
         if 'clrNm' in details_result.keys():
             lost_goods_result['color'] = details_result['clrNm']
 
+        # 1. 찾은 날짜 > 잃어버린 날짜
+        # 2. 보관 중인 장소 = 신고한 장소, else 잃어버린 장소 근처 포털기관 위치
+        # 참고: 찾은 물품 = 잃어버린 물품 -> 검색이 잘 안됨
+        # 정규표현식으로 어절 단위 분리, 각 어절이 포함된 물품 검사 -> 가능하지만 검색 속도 증가
+        # 따라서 마지막 어절만 추출, 검색에 활용
+
         # 습득물 조회를 위한 파라미터 객체
         params_found = {
-            'PRDT_NM': lost_goods_result['lostProductName'],
+            'PRDT_NM': lost_goods_result['lostProductName'].split(' ')[-1],
             'DEP_PLACE': lost_goods_result['orgName'],
             'pageNo': 1,
             'numOfRows': result['foundNumOfRows']
         }
 
-        # 1. 찾은 날짜 > 잃어버린 날짜
-        # 2. 찾은 물품 = 잃어버린 물품 (정규표현식으로 어절 단위 분리, 각 어절이 포함된 물품 검사)
-        # 3. 보관 중인 장소 = 신고한 장소, else 잃어버린 장소 근처 포털기관 위치
-
-        # 분실물과 유사한 습득물 리스트 생성
-        # candidate_found = get_response_and_convert(found_search_np_url, params_found)
-        # candidate_portal = get_response_and_convert(portal_search_np_url, params_found)
-
+        # 습득물 조회
+        print('다음으로 검색:', params_found['PRDT_NM'])
         page_no = 1
         max_candidate_num = params_found['numOfRows']
         while True:
-            params['pageNo'] = page_no
+            if max_candidate_num == 0:
+                break
+
+            params_found['pageNo'] = page_no
             candidates = get_response_and_convert(found_search_np_url, params_found)
+            if candidates is None:
+                break
+
+            for candidate in candidates:
+                if int(candidate['fdYmd'].replace('-', '')) >= int(lost_goods_result['lostYMD'].replace('-', '')):
+                    matched_goods = {
+
+                    }
+
+                    lost_goods_result['predictedItems'].append(candidate)
+                    max_candidate_num -= 1
+
+                if max_candidate_num == 0:
+                    break
+
+            page_no += 1
+
+        # 포털기관 조회
+        params_found['DEP_PLACE'] = ''
+        page_no = 1
+        while True:
+            if max_candidate_num == 0:
+                break
+
+            params_found['pageNo'] = page_no
+            candidates = get_response_and_convert(portal_search_np_url, params_found)
             if candidates is None:
                 break
 
@@ -278,13 +307,8 @@ def lost_search():
 
                 if max_candidate_num == 0:
                     break
-            if max_candidate_num == 0:
-                break
-            else:
-                page_no += 1
 
-
-
+            page_no += 1
 
         result['items'].append(lost_goods_result)
         num_of_item += 1
@@ -327,7 +351,10 @@ def found_search():
     if request.args.get('foundPlaceCode') is not None:
         # 습득 지역명을 코드로 변환
         params['N_FD_LCT_CD'] = location_to_code(request.args.get('foundPlaceCode'))
+
+    # 색상코드 (경찰서, 포털기관)
     if request.args.get('colorCode') is not None:
+        params['CLR_CD'] = request.args.get('colorCode')
         params['FD_COL_CD'] = request.args.get('colorCode')
 
     # 페이지 번호, 목록 건수 파라미터가 있으면 객체 저장, 없으면 디폴트값을 객체에 저장
@@ -347,16 +374,19 @@ def found_search():
         'foundNumOfRows': params['numOfRows']
     }
 
-    # 습득물 리스트
+    # 습득물 리스트 (경찰서, 포털기관)
     found_goods_list = []
+    portal_goods_list = []
 
     if 'START_YMD' not in params.keys() and 'END_YMD' not in params.keys() \
             and 'PRDT_CL_CD_01' not in params.keys() and 'PRDT_CL_CD_02' not in params.keys() \
-            and 'N_FD_LCT_CD' not in params.keys() and 'FD_COL_CD' not in params.keys():
+            and 'N_FD_LCT_CD' not in params.keys() and 'FD_COL_CD' not in params.keys() \
+            and 'CLR_CD' not in params.keys():
         # 분류, 기간별 조회 API 파라미터가 모두 빈 칸일 때
         # -> 파라미터 존재 여부에 상관 없이 명칭, 장소별 조회 API를 사용
 
         found_goods_list = get_response_and_convert(found_search_np_url, params)
+        portal_goods_list = get_response_and_convert(portal_search_np_url, params)
     else:
         # 분류, 기간별 조회 API 파라미터가 하나라도 채워져있을 때
         # -> 파라미터 존재 여부에 상관 없이 분류, 기간별 조회 API를 사용
@@ -366,6 +396,7 @@ def found_search():
             # 명칭, 장소별 조회 API 파라미터가 모두 빈 칸일 때
 
             found_goods_list = get_response_and_convert(found_search_cd_url, params)
+            portal_goods_list = get_response_and_convert(portal_search_cd_url, params)
         else:
             # 명칭, 장소별 조회 API 파라미터가 하나라도 채워져있을 때
             # 단, 여기서 lostPageNo는 1로 고정됨
