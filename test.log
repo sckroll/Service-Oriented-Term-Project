@@ -2683,3 +2683,1270 @@ INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 286-773-444
 INFO:werkzeug: * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\QueaNam\\PycharmProjects\\Service-Oriented-Term-Project\\views\\menus.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 286-773-444
+INFO:werkzeug: * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\QueaNam\\PycharmProjects\\Service-Oriented-Term-Project\\views\\menus.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 286-773-444
+INFO:werkzeug: * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\QueaNam\\PycharmProjects\\Service-Oriented-Term-Project\\views\\menus.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 286-773-444
+INFO:werkzeug: * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:06:33] "GET / HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): dapi.kakao.com:443
+DEBUG:urllib3.connectionpool:https://dapi.kakao.com:443 "GET /v2/search/image?query=%EB%96%BC%EA%BB%84%EB%A3%A9 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:24:10] "GET /menu/images HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:24:10] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:24:10] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:24:10] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:24:10] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:24:10] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:24:10] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:24:10] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:24:10] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:24:11] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:24:11] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:24:12] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:28:40] "GET /menu/api_run HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:28:40] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:28:40] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:28:40] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:28:40] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:28:40] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:28:41] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\QueaNam\\PycharmProjects\\Service-Oriented-Term-Project\\views\\menus.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 286-773-444
+INFO:werkzeug: * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): dapi.kakao.com:443
+DEBUG:urllib3.connectionpool:https://dapi.kakao.com:443 "GET /v3/search/book?target=title&query=%EB%B0%98%EC%A7%80%EA%B0%91 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:29:14] "GET /menu/api_run HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:29:14] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:29:15] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:29:15] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:29:15] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:29:15] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:29:15] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:29:15] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): dapi.kakao.com:443
+DEBUG:urllib3.connectionpool:https://dapi.kakao.com:443 "GET /v3/search/book?target=title&query=%EB%B0%98%EC%A7%80%EA%B0%91 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:30:31] "GET /menu/api_run HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:30:31] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:30:31] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:30:31] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:30:31] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:30:31] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:30:31] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:30:31] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): dapi.kakao.com:443
+DEBUG:urllib3.connectionpool:https://dapi.kakao.com:443 "GET /v3/search/book?target=title&query=%EB%B0%98%EC%A7%80%EA%B0%91 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:33:49] "GET /menu/api_run HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:33:49] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:33:49] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:33:49] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:33:49] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:33:49] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:33:49] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:33:49] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:33:50] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:33:50] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:33:50] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:33:50] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:33:50] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): dapi.kakao.com:443
+DEBUG:urllib3.connectionpool:https://dapi.kakao.com:443 "GET /v3/search/book?target=title&query=%EB%B0%98%EC%A7%80%EA%B0%91 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:34:53] "GET /menu/api_run HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:34:53] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:34:53] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:34:53] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:34:53] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:34:53] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:34:53] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:34:53] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): dapi.kakao.com:443
+DEBUG:urllib3.connectionpool:https://dapi.kakao.com:443 "GET /v3/search/book?target=title&query=%EB%B0%98%EC%A7%80%EA%B0%91 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:35:02] "GET /menu/api_run HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:35:02] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:35:03] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:35:03] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:35:03] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:35:03] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:35:03] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:35:03] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:35:03] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:35:03] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:35:03] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:35:03] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:35:04] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): dapi.kakao.com:443
+DEBUG:urllib3.connectionpool:https://dapi.kakao.com:443 "GET /v3/search/book?target=title&query=%EB%B0%98%EC%A7%80%EA%B0%91 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:35:31] "GET /menu/api_run HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:35:31] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:35:32] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:35:32] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:35:32] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:35:32] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:35:32] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:35:32] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): dapi.kakao.com:443
+DEBUG:urllib3.connectionpool:https://dapi.kakao.com:443 "GET /v3/search/book?target=title&query=%EB%B0%98%EC%A7%80%EA%B0%91 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:36:51] "GET /menu/api_run HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:36:51] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:36:51] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:36:51] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:36:51] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:36:51] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:36:51] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:36:51] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:36:52] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:36:52] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:36:52] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:36:52] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:36:52] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): dapi.kakao.com:443
+DEBUG:urllib3.connectionpool:https://dapi.kakao.com:443 "GET /v3/search/book?target=title&query=%EB%B0%98%EC%A7%80%EA%B0%91 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:37:10] "GET /menu/api_run HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:37:10] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:37:11] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:37:11] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:37:11] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:37:11] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:37:11] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:37:11] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): dapi.kakao.com:443
+DEBUG:urllib3.connectionpool:https://dapi.kakao.com:443 "GET /v3/search/book?target=title&query=%EB%B0%98%EC%A7%80%EA%B0%91 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:37:41] "GET /menu/api_run HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:37:41] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:37:42] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:37:42] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:37:42] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:37:42] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:37:42] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:37:42] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:37:42] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:37:42] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:37:43] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:37:43] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:37:43] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 286-773-444
+INFO:werkzeug: * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:42:14] "GET / HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:42:14] "GET /favicon.ico HTTP/1.1" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): dapi.kakao.com:443
+DEBUG:urllib3.connectionpool:https://dapi.kakao.com:443 "GET /v3/search/book?target=title&query=%EB%B0%98%EC%A7%80%EA%B0%91 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:42:57] "GET /menu/api_run HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:42:57] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:42:58] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:42:58] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:42:58] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:42:58] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:42:58] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:42:58] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:42:58] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:42:58] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:42:59] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:42:59] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:42:59] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 21:42:59] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): dapi.kakao.com:443
+DEBUG:urllib3.connectionpool:https://dapi.kakao.com:443 "GET /v3/search/book?target=title&query=%EB%B0%98%EC%A7%80%EA%B0%91 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:00:14] "GET /menu/api_run HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:00:15] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:00:15] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:00:15] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:00:15] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:00:15] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:00:15] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:00:15] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:00:15] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:00:15] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:00:15] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:00:16] "GET / HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): dapi.kakao.com:443
+DEBUG:urllib3.connectionpool:https://dapi.kakao.com:443 "GET /v3/search/book?target=title&query=%EB%B0%98%EC%A7%80%EA%B0%91 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:00:17] "GET /menu/api_run HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:00:18] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:00:18] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:00:18] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:00:18] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:00:18] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:00:18] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:00:18] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 286-773-444
+INFO:werkzeug: * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): dapi.kakao.com:443
+DEBUG:urllib3.connectionpool:https://dapi.kakao.com:443 "GET /v3/search/book?target=title&query=%EB%B0%98%EC%A7%80%EA%B0%91 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:18:55] "GET /menu/api_run HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:18:55] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:18:55] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:18:55] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:18:55] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:18:55] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:18:55] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:18:55] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): dapi.kakao.com:443
+DEBUG:urllib3.connectionpool:https://dapi.kakao.com:443 "GET /v3/search/book?target=title&query=%EB%B0%98%EC%A7%80%EA%B0%91 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:19:20] "GET /menu/api_run HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:19:20] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:19:20] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:19:20] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:19:20] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:19:20] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:19:20] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:19:20] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:19:21] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:19:21] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): dapi.kakao.com:443
+DEBUG:urllib3.connectionpool:https://dapi.kakao.com:443 "GET /v3/search/book?target=title&query=%EB%B0%98%EC%A7%80%EA%B0%91 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:21:14] "GET /menu/api_run HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:21:14] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:21:14] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:21:14] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:21:14] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:21:14] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:21:14] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:21:14] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): dapi.kakao.com:443
+DEBUG:urllib3.connectionpool:https://dapi.kakao.com:443 "GET /v3/search/book?target=title&query=%EB%B0%98%EC%A7%80%EA%B0%91 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:31:17] "GET /menu/api_run HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:31:17] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:31:17] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:31:17] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:31:17] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:31:17] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:31:17] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:31:17] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): dapi.kakao.com:443
+DEBUG:urllib3.connectionpool:https://dapi.kakao.com:443 "GET /v3/search/book?target=title&query=%EB%B0%98%EC%A7%80%EA%B0%91 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:32:38] "GET /menu/api_run HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:32:38] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:32:38] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:32:38] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:32:38] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:32:38] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:32:38] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:32:38] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): dapi.kakao.com:443
+DEBUG:urllib3.connectionpool:https://dapi.kakao.com:443 "GET /v3/search/book?target=title&query=%EB%B0%98%EC%A7%80%EA%B0%91 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:42:38] "GET /menu/api_run HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:42:38] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:42:38] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:42:38] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:42:38] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:42:38] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:42:38] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:42:38] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:42:39] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:42:39] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:42:39] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:42:39] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:42:39] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): dapi.kakao.com:443
+DEBUG:urllib3.connectionpool:https://dapi.kakao.com:443 "GET /v3/search/book?target=title&query=%EB%B0%98%EC%A7%80%EA%B0%91 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:44:02] "GET /menu/api_run HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:44:02] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:44:02] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:44:02] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:44:02] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:44:02] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:44:02] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:44:02] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): dapi.kakao.com:443
+DEBUG:urllib3.connectionpool:https://dapi.kakao.com:443 "GET /v3/search/book?target=title&query=%EB%B0%98%EC%A7%80%EA%B0%91 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:45:20] "GET /menu/api_run HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:45:20] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:45:20] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:45:20] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:45:20] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:45:20] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:45:20] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:45:20] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): dapi.kakao.com:443
+DEBUG:urllib3.connectionpool:https://dapi.kakao.com:443 "GET /v3/search/book?target=title&query=%EB%B0%98%EC%A7%80%EA%B0%91 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:50:54] "GET /menu/api_run HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:50:54] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:50:54] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:50:54] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:50:54] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:50:54] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:50:54] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:50:54] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): dapi.kakao.com:443
+DEBUG:urllib3.connectionpool:https://dapi.kakao.com:443 "GET /v3/search/book?target=title&query=%EB%B0%98%EC%A7%80%EA%B0%91 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:56:09] "GET /menu/api_run HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:56:10] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:56:10] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:56:10] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:56:10] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:56:10] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:56:10] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:56:10] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): dapi.kakao.com:443
+DEBUG:urllib3.connectionpool:https://dapi.kakao.com:443 "GET /v3/search/book?target=title&query=%EB%B0%98%EC%A7%80%EA%B0%91 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:57:59] "GET /menu/api_run HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:57:59] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:57:59] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:57:59] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:57:59] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:57:59] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:57:59] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:57:59] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:57:59] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 22:58:00] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): dapi.kakao.com:443
+DEBUG:urllib3.connectionpool:https://dapi.kakao.com:443 "GET /v3/search/book?target=title&query=%EB%B0%98%EC%A7%80%EA%B0%91 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:01:17] "GET /menu/api_run HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:01:17] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:01:18] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:01:18] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:01:18] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:01:18] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:01:18] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:01:18] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): dapi.kakao.com:443
+DEBUG:urllib3.connectionpool:https://dapi.kakao.com:443 "GET /v3/search/book?target=title&query=%EB%B0%98%EC%A7%80%EA%B0%91 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:02:50] "GET /menu/api_run HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:02:50] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:02:51] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:02:51] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:02:51] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:02:51] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:02:51] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:02:51] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): dapi.kakao.com:443
+DEBUG:urllib3.connectionpool:https://dapi.kakao.com:443 "GET /v3/search/book?target=title&query=%EB%B0%98%EC%A7%80%EA%B0%91 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:04:02] "GET /menu/api_run HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:04:02] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:04:02] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:04:02] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:04:02] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:04:02] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:04:02] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:04:02] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): dapi.kakao.com:443
+DEBUG:urllib3.connectionpool:https://dapi.kakao.com:443 "GET /v3/search/book?target=title&query=%EB%B0%98%EC%A7%80%EA%B0%91 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:05:07] "GET /menu/api_run HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:05:07] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:05:07] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:05:07] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:05:07] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:05:07] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:05:07] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:05:07] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): dapi.kakao.com:443
+DEBUG:urllib3.connectionpool:https://dapi.kakao.com:443 "GET /v3/search/book?target=title&query=%EB%B0%98%EC%A7%80%EA%B0%91 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:07:56] "GET /menu/api_run HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:07:56] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:07:56] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:07:56] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:07:56] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:07:56] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:07:56] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:07:56] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): dapi.kakao.com:443
+DEBUG:urllib3.connectionpool:https://dapi.kakao.com:443 "GET /v3/search/book?target=title&query=%EB%B0%98%EC%A7%80%EA%B0%91 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:08:08] "GET /menu/api_run HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:08:09] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:08:09] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:08:09] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:08:09] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:08:09] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:08:09] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:08:09] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:08:09] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:08:09] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:08:10] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:08:10] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): dapi.kakao.com:443
+DEBUG:urllib3.connectionpool:https://dapi.kakao.com:443 "GET /v3/search/book?target=title&query=%EB%B0%98%EC%A7%80%EA%B0%91 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:18:24] "GET /menu/api_run HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:18:24] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:18:25] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:18:25] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:18:25] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:18:25] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:18:25] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:18:25] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:18:25] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:18:25] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:18:25] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:18:26] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:18:26] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): dapi.kakao.com:443
+DEBUG:urllib3.connectionpool:https://dapi.kakao.com:443 "GET /v3/search/book?target=title&query=%EB%B0%98%EC%A7%80%EA%B0%91 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:18:32] "GET /menu/api_run HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:18:32] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:18:32] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:18:32] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:18:32] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:18:32] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:18:32] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:18:33] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): dapi.kakao.com:443
+DEBUG:urllib3.connectionpool:https://dapi.kakao.com:443 "GET /v3/search/book?target=title&query=%EB%B0%98%EC%A7%80%EA%B0%91 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:22:16] "GET /menu/api_run HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:22:16] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:22:17] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:22:17] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:22:17] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:22:17] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:22:17] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:22:17] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): dapi.kakao.com:443
+DEBUG:urllib3.connectionpool:https://dapi.kakao.com:443 "GET /v3/search/book?target=title&query=%EB%B0%98%EC%A7%80%EA%B0%91 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:23:05] "GET /menu/api_run HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:23:05] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:23:05] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:23:05] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:23:05] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:23:05] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:23:05] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:23:05] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:23:05] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:23:06] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:23:06] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:23:06] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:23:06] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): dapi.kakao.com:443
+DEBUG:urllib3.connectionpool:https://dapi.kakao.com:443 "GET /v3/search/book?target=title&query=%EB%B0%98%EC%A7%80%EA%B0%91 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:25:15] "GET /menu/api_run HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:25:15] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:25:15] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:25:15] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:25:15] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:25:15] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:25:15] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:25:15] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\QueaNam\\PycharmProjects\\Service-Oriented-Term-Project\\views\\menus.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 286-773-444
+INFO:werkzeug: * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\QueaNam\\PycharmProjects\\Service-Oriented-Term-Project\\views\\menus.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 286-773-444
+INFO:werkzeug: * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:36:40] "GET /menu/api/lostInfo HTTP/1.1" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LostGoodsInfoInqireService/getLostGoodsInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&pageNo=1&numOfRows=10 HTTP/1.1" 200 966
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LostGoodsInfoInqireService/getLostGoodsDetailInfo?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&ATC_ID=L2019121600000031 HTTP/1.1" 200 582
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LosfundInfoInqireService/getLosfundInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&PRDT_NM=%EC%A7%80%EA%B0%91&DEP_PLACE=%EB%B2%94%EA%B3%84%ED%8C%8C%EC%B6%9C%EC%86%8C&pageNo=1&numOfRows=10 HTTP/1.1" 200 898
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LosfundInfoInqireService/getLosfundInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&PRDT_NM=%EC%A7%80%EA%B0%91&DEP_PLACE=%EB%B2%94%EA%B3%84%ED%8C%8C%EC%B6%9C%EC%86%8C&pageNo=2&numOfRows=10 HTTP/1.1" 200 528
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:36:58] "GET /api/lostInfo HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:36:59] "GET /api/lostInfo?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:36:59] "GET /api/lostInfo?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:36:59] "GET /api/lostInfo?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:36:59] "GET /api/lostInfo?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:36:59] "GET /api/lostInfo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LostGoodsInfoInqireService/getLostGoodsInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&pageNo=1&numOfRows=10 HTTP/1.1" 200 966
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LostGoodsInfoInqireService/getLostGoodsDetailInfo?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&ATC_ID=L2019121600000031 HTTP/1.1" 200 582
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LostGoodsInfoInqireService/getLostGoodsInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&pageNo=1&numOfRows=10 HTTP/1.1" 200 966
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LostGoodsInfoInqireService/getLostGoodsDetailInfo?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&ATC_ID=L2019121600000031 HTTP/1.1" 200 582
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LosfundInfoInqireService/getLosfundInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&PRDT_NM=%EC%A7%80%EA%B0%91&DEP_PLACE=%EB%B2%94%EA%B3%84%ED%8C%8C%EC%B6%9C%EC%86%8C&pageNo=1&numOfRows=10 HTTP/1.1" 200 898
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LosfundInfoInqireService/getLosfundInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&PRDT_NM=%EC%A7%80%EA%B0%91&DEP_PLACE=%EB%B2%94%EA%B3%84%ED%8C%8C%EC%B6%9C%EC%86%8C&pageNo=2&numOfRows=10 HTTP/1.1" 200 528
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:40:12] "GET /api/lostInfo HTTP/1.1" 500 -
+DEBUG:urllib3.connectionpool:http://localhost:8000 "GET /api/lostInfo HTTP/1.1" 500 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:40:12] "GET /menu/api_run HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:40:13] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:40:13] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:40:13] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:40:13] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:40:13] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LostGoodsInfoInqireService/getLostGoodsInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&pageNo=1&numOfRows=10 HTTP/1.1" 200 966
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LostGoodsInfoInqireService/getLostGoodsDetailInfo?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&ATC_ID=L2019121600000031 HTTP/1.1" 200 582
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LosfundInfoInqireService/getLosfundInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&PRDT_NM=%EC%A7%80%EA%B0%91&DEP_PLACE=%EB%B2%94%EA%B3%84%ED%8C%8C%EC%B6%9C%EC%86%8C&pageNo=1&numOfRows=10 HTTP/1.1" 200 898
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LosfundInfoInqireService/getLosfundInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&PRDT_NM=%EC%A7%80%EA%B0%91&DEP_PLACE=%EB%B2%94%EA%B3%84%ED%8C%8C%EC%B6%9C%EC%86%8C&pageNo=2&numOfRows=10 HTTP/1.1" 200 528
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:40:26] "GET /api/lostInfo HTTP/1.1" 500 -
+DEBUG:urllib3.connectionpool:http://localhost:8000 "GET /api/lostInfo HTTP/1.1" 500 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:40:26] "GET /menu/api_run HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:40:26] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:40:26] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:40:26] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:40:27] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:40:27] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:40:27] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\QueaNam\\PycharmProjects\\Service-Oriented-Term-Project\\views\\menus.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 286-773-444
+INFO:werkzeug: * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 286-773-444
+INFO:werkzeug: * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LostGoodsInfoInqireService/getLostGoodsInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&pageNo=1&numOfRows=10 HTTP/1.1" 200 966
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LostGoodsInfoInqireService/getLostGoodsDetailInfo?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&ATC_ID=L2019121600000031 HTTP/1.1" 200 582
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:40:44] "GET /menu/ HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LosfundInfoInqireService/getLosfundInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&PRDT_NM=%EC%A7%80%EA%B0%91&DEP_PLACE=%EB%B2%94%EA%B3%84%ED%8C%8C%EC%B6%9C%EC%86%8C&pageNo=1&numOfRows=10 HTTP/1.1" 200 898
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:40:49] "GET / HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LosfundInfoInqireService/getLosfundInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&PRDT_NM=%EC%A7%80%EA%B0%91&DEP_PLACE=%EB%B2%94%EA%B3%84%ED%8C%8C%EC%B6%9C%EC%86%8C&pageNo=2&numOfRows=10 HTTP/1.1" 200 528
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:40:50] "GET /api/lostInfo HTTP/1.1" 500 -
+DEBUG:urllib3.connectionpool:http://localhost:8000 "GET /api/lostInfo HTTP/1.1" 500 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:40:50] "GET /menu/api_run HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LostGoodsInfoInqireService/getLostGoodsInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&pageNo=1&numOfRows=10 HTTP/1.1" 200 966
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LostGoodsInfoInqireService/getLostGoodsDetailInfo?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&ATC_ID=L2019121600000031 HTTP/1.1" 200 582
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): dapi.kakao.com:443
+DEBUG:urllib3.connectionpool:https://dapi.kakao.com:443 "GET /v3/search/book?target=title&query=%EB%AF%B8%EC%9B%80%EB%B0%9B%EC%9D%84%20%EC%9A%A9%EA%B8%B0 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:41:00] "GET /menu/api_manual HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:41:00] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LosfundInfoInqireService/getLosfundInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&PRDT_NM=%EC%A7%80%EA%B0%91&DEP_PLACE=%EB%B2%94%EA%B3%84%ED%8C%8C%EC%B6%9C%EC%86%8C&pageNo=1&numOfRows=10 HTTP/1.1" 200 898
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:41:01] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:41:01] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:41:01] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:41:01] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:41:01] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:41:01] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LostGoodsInfoInqireService/getLostGoodsInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&pageNo=1&numOfRows=10 HTTP/1.1" 200 966
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LostGoodsInfoInqireService/getLostGoodsDetailInfo?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&ATC_ID=L2019121600000031 HTTP/1.1" 200 582
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LostGoodsInfoInqireService/getLostGoodsInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&pageNo=1&numOfRows=10 HTTP/1.1" 200 966
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LostGoodsInfoInqireService/getLostGoodsDetailInfo?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&ATC_ID=L2019121600000031 HTTP/1.1" 200 582
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LosfundInfoInqireService/getLosfundInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&PRDT_NM=%EC%A7%80%EA%B0%91&DEP_PLACE=%EB%B2%94%EA%B3%84%ED%8C%8C%EC%B6%9C%EC%86%8C&pageNo=2&numOfRows=10 HTTP/1.1" 200 528
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:41:04] "GET /api/lostInfo HTTP/1.1" 500 -
+DEBUG:urllib3.connectionpool:http://localhost:8000 "GET /api/lostInfo HTTP/1.1" 500 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:41:04] "GET /menu/api_run HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): dapi.kakao.com:443
+DEBUG:urllib3.connectionpool:https://dapi.kakao.com:443 "GET /v3/search/book?target=title&query=%EB%AF%B8%EC%9B%80%EB%B0%9B%EC%9D%84%20%EC%9A%A9%EA%B8%B0 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:41:06] "GET /menu/api_manual HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:41:06] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:41:06] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:41:06] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:41:06] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:41:06] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:41:06] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:41:06] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LosfundInfoInqireService/getLosfundInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&PRDT_NM=%EC%A7%80%EA%B0%91&DEP_PLACE=%EB%B2%94%EA%B3%84%ED%8C%8C%EC%B6%9C%EC%86%8C&pageNo=1&numOfRows=10 HTTP/1.1" 200 898
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LosfundInfoInqireService/getLosfundInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&PRDT_NM=%EC%A7%80%EA%B0%91&DEP_PLACE=%EB%B2%94%EA%B3%84%ED%8C%8C%EC%B6%9C%EC%86%8C&pageNo=1&numOfRows=10 HTTP/1.1" 200 898
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LostGoodsInfoInqireService/getLostGoodsInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&pageNo=1&numOfRows=10 HTTP/1.1" 200 966
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LostGoodsInfoInqireService/getLostGoodsDetailInfo?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&ATC_ID=L2019121600000031 HTTP/1.1" 200 582
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LosfundInfoInqireService/getLosfundInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&PRDT_NM=%EC%A7%80%EA%B0%91&DEP_PLACE=%EB%B2%94%EA%B3%84%ED%8C%8C%EC%B6%9C%EC%86%8C&pageNo=2&numOfRows=10 HTTP/1.1" 200 528
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:41:10] "GET /api/lostInfo HTTP/1.1" 500 -
+DEBUG:urllib3.connectionpool:http://localhost:8000 "GET /api/lostInfo HTTP/1.1" 500 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:41:10] "GET /menu/api_run HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LosfundInfoInqireService/getLosfundInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&PRDT_NM=%EC%A7%80%EA%B0%91&DEP_PLACE=%EB%B2%94%EA%B3%84%ED%8C%8C%EC%B6%9C%EC%86%8C&pageNo=2&numOfRows=10 HTTP/1.1" 200 528
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:41:11] "GET /api/lostInfo HTTP/1.1" 500 -
+DEBUG:urllib3.connectionpool:http://localhost:8000 "GET /api/lostInfo HTTP/1.1" 500 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:41:11] "GET /menu/api_run HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LosfundInfoInqireService/getLosfundInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&PRDT_NM=%EC%A7%80%EA%B0%91&DEP_PLACE=%EB%B2%94%EA%B3%84%ED%8C%8C%EC%B6%9C%EC%86%8C&pageNo=1&numOfRows=10 HTTP/1.1" 200 898
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LosfundInfoInqireService/getLosfundInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&PRDT_NM=%EC%A7%80%EA%B0%91&DEP_PLACE=%EB%B2%94%EA%B3%84%ED%8C%8C%EC%B6%9C%EC%86%8C&pageNo=2&numOfRows=10 HTTP/1.1" 200 528
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:41:16] "GET /api/lostInfo HTTP/1.1" 500 -
+DEBUG:urllib3.connectionpool:http://localhost:8000 "GET /api/lostInfo HTTP/1.1" 500 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:41:16] "GET /menu/api_run HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LostGoodsInfoInqireService/getLostGoodsInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&pageNo=1&numOfRows=10 HTTP/1.1" 200 966
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LostGoodsInfoInqireService/getLostGoodsDetailInfo?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&ATC_ID=L2019121600000031 HTTP/1.1" 200 582
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LosfundInfoInqireService/getLosfundInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&PRDT_NM=%EC%A7%80%EA%B0%91&DEP_PLACE=%EB%B2%94%EA%B3%84%ED%8C%8C%EC%B6%9C%EC%86%8C&pageNo=1&numOfRows=10 HTTP/1.1" 200 898
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LosfundInfoInqireService/getLosfundInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&PRDT_NM=%EC%A7%80%EA%B0%91&DEP_PLACE=%EB%B2%94%EA%B3%84%ED%8C%8C%EC%B6%9C%EC%86%8C&pageNo=2&numOfRows=10 HTTP/1.1" 200 528
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:41:59] "GET /api/lostInfo HTTP/1.1" 500 -
+DEBUG:urllib3.connectionpool:http://localhost:8000 "GET /api/lostInfo HTTP/1.1" 500 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:41:59] "GET /menu/api_run HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:41:59] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:41:59] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:41:59] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:41:59] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:41:59] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:41:59] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:41:59] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LostGoodsInfoInqireService/getLostGoodsInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&pageNo=1&numOfRows=10 HTTP/1.1" 200 966
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LostGoodsInfoInqireService/getLostGoodsDetailInfo?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&ATC_ID=L2019121600000031 HTTP/1.1" 200 582
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LosfundInfoInqireService/getLosfundInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&PRDT_NM=%EC%A7%80%EA%B0%91&DEP_PLACE=%EB%B2%94%EA%B3%84%ED%8C%8C%EC%B6%9C%EC%86%8C&pageNo=1&numOfRows=10 HTTP/1.1" 200 898
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LosfundInfoInqireService/getLosfundInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&PRDT_NM=%EC%A7%80%EA%B0%91&DEP_PLACE=%EB%B2%94%EA%B3%84%ED%8C%8C%EC%B6%9C%EC%86%8C&pageNo=2&numOfRows=10 HTTP/1.1" 200 528
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:43:38] "GET /api/lostInfo HTTP/1.1" 500 -
+DEBUG:urllib3.connectionpool:http://localhost:8000 "GET /api/lostInfo HTTP/1.1" 500 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:43:38] "GET /menu/api_run HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:43:38] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:43:38] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:43:38] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:43:38] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:43:38] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:43:38] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:43:39] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:43:39] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:43:39] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\QueaNam\\PycharmProjects\\Service-Oriented-Term-Project\\views\\menus.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 286-773-444
+INFO:werkzeug: * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LostGoodsInfoInqireService/getLostGoodsInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&pageNo=1&numOfRows=10 HTTP/1.1" 200 966
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LostGoodsInfoInqireService/getLostGoodsDetailInfo?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&ATC_ID=L2019121600000031 HTTP/1.1" 200 582
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LosfundInfoInqireService/getLosfundInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&PRDT_NM=%EC%A7%80%EA%B0%91&DEP_PLACE=%EB%B2%94%EA%B3%84%ED%8C%8C%EC%B6%9C%EC%86%8C&pageNo=1&numOfRows=10 HTTP/1.1" 200 898
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LostGoodsInfoInqireService/getLostGoodsInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&pageNo=1&numOfRows=10 HTTP/1.1" 200 966
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LostGoodsInfoInqireService/getLostGoodsDetailInfo?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&ATC_ID=L2019121600000031 HTTP/1.1" 200 582
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LosfundInfoInqireService/getLosfundInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&PRDT_NM=%EC%A7%80%EA%B0%91&DEP_PLACE=%EB%B2%94%EA%B3%84%ED%8C%8C%EC%B6%9C%EC%86%8C&pageNo=2&numOfRows=10 HTTP/1.1" 200 528
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:44:54] "GET /api/lostInfo HTTP/1.1" 500 -
+DEBUG:urllib3.connectionpool:http://localhost:8000 "GET /api/lostInfo HTTP/1.1" 500 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:44:54] "GET /menu/api_run HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LosfundInfoInqireService/getLosfundInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&PRDT_NM=%EC%A7%80%EA%B0%91&DEP_PLACE=%EB%B2%94%EA%B3%84%ED%8C%8C%EC%B6%9C%EC%86%8C&pageNo=1&numOfRows=10 HTTP/1.1" 200 898
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LosfundInfoInqireService/getLosfundInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&PRDT_NM=%EC%A7%80%EA%B0%91&DEP_PLACE=%EB%B2%94%EA%B3%84%ED%8C%8C%EC%B6%9C%EC%86%8C&pageNo=2&numOfRows=10 HTTP/1.1" 200 528
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:44:59] "GET /api/lostInfo HTTP/1.1" 500 -
+DEBUG:urllib3.connectionpool:http://localhost:8000 "GET /api/lostInfo HTTP/1.1" 500 None
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:44:59] "GET /menu/api_run HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:44:59] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:44:59] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:44:59] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:44:59] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:44:59] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:44:59] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:45:00] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\QueaNam\\PycharmProjects\\Service-Oriented-Term-Project\\views\\menus.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 286-773-444
+INFO:werkzeug: * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\QueaNam\\PycharmProjects\\Service-Oriented-Term-Project\\views\\menus.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 286-773-444
+INFO:werkzeug: * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\QueaNam\\PycharmProjects\\Service-Oriented-Term-Project\\views\\menus.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 286-773-444
+INFO:werkzeug: * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:48:06] "GET /menu/api_run HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:48:06] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:48:06] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:48:06] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:48:06] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:48:07] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\QueaNam\\PycharmProjects\\Service-Oriented-Term-Project\\views\\menus.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 286-773-444
+INFO:werkzeug: * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:50:08] "GET /menu/api_run HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:50:08] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:50:08] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:50:08] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:50:08] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:50:08] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\QueaNam\\PycharmProjects\\Service-Oriented-Term-Project\\views\\menus.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 286-773-444
+INFO:werkzeug: * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:53:43] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:53:45] "GET /auth/login HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:53:46] "GET /auth/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:53:46] "GET /auth/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:53:46] "GET /auth/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:53:46] "GET /auth/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:53:46] "GET /auth/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:53:46] "GET /auth/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [16/Dec/2019 23:53:46] "GET /auth/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\QueaNam\\PycharmProjects\\Service-Oriented-Term-Project\\views\\menus.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 286-773-444
+INFO:werkzeug: * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 00:00:04] "GET /menu/api_run HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 00:00:04] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 00:00:05] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 00:00:05] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 00:00:05] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 00:00:05] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\QueaNam\\PycharmProjects\\Service-Oriented-Term-Project\\views\\menus.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 286-773-444
+INFO:werkzeug: * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 00:18:29] "GET / HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+INFO:werkzeug: * Detected change in 'C:\\Users\\QueaNam\\PycharmProjects\\Service-Oriented-Term-Project\\views\\menus.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 286-773-444
+INFO:werkzeug: * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+INFO:werkzeug: * Detected change in 'C:\\Users\\QueaNam\\PycharmProjects\\Service-Oriented-Term-Project\\views\\menus.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 286-773-444
+INFO:werkzeug: * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+INFO:werkzeug: * Detected change in 'C:\\Users\\QueaNam\\PycharmProjects\\Service-Oriented-Term-Project\\views\\menus.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 286-773-444
+INFO:werkzeug: * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LostGoodsInfoInqireService/getLostGoodsInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&pageNo=1&numOfRows=10 HTTP/1.1" 200 966
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LostGoodsInfoInqireService/getLostGoodsDetailInfo?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&ATC_ID=L2019121600000031 HTTP/1.1" 200 582
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LostGoodsInfoInqireService/getLostGoodsInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&pageNo=1&numOfRows=10 HTTP/1.1" 200 966
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LostGoodsInfoInqireService/getLostGoodsDetailInfo?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&ATC_ID=L2019121600000031 HTTP/1.1" 200 582
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LosfundInfoInqireService/getLosfundInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&PRDT_NM=%EC%A7%80%EA%B0%91&DEP_PLACE=%EB%B2%94%EA%B3%84%ED%8C%8C%EC%B6%9C%EC%86%8C&pageNo=1&numOfRows=10 HTTP/1.1" 200 898
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LosfundInfoInqireService/getLosfundInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&PRDT_NM=%EC%A7%80%EA%B0%91&DEP_PLACE=%EB%B2%94%EA%B3%84%ED%8C%8C%EC%B6%9C%EC%86%8C&pageNo=2&numOfRows=10 HTTP/1.1" 200 528
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LosfundInfoInqireService/getLosfundInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&PRDT_NM=%EC%A7%80%EA%B0%91&DEP_PLACE=%EB%B2%94%EA%B3%84%ED%8C%8C%EC%B6%9C%EC%86%8C&pageNo=1&numOfRows=10 HTTP/1.1" 200 898
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 00:19:06] "GET /api/lostInfo HTTP/1.1" 500 -
+DEBUG:urllib3.connectionpool:http://localhost:8000 "GET /api/lostInfo HTTP/1.1" 500 None
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 00:19:06] "GET /menu/api_run HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LosfundInfoInqireService/getLosfundInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&PRDT_NM=%EC%A7%80%EA%B0%91&DEP_PLACE=%EB%B2%94%EA%B3%84%ED%8C%8C%EC%B6%9C%EC%86%8C&pageNo=2&numOfRows=10 HTTP/1.1" 200 528
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 00:19:10] "GET /api/lostInfo HTTP/1.1" 500 -
+DEBUG:urllib3.connectionpool:http://localhost:8000 "GET /api/lostInfo HTTP/1.1" 500 None
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 00:19:10] "GET /menu/api_run HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 00:19:10] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 00:19:10] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 00:19:10] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 00:19:10] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 00:19:10] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 00:19:10] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 00:19:10] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\QueaNam\\PycharmProjects\\Service-Oriented-Term-Project\\views\\menus.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 286-773-444
+INFO:werkzeug: * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:12:38] "GET / HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 0.0.0.0:8000
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:12:40] "GET /menu/api_run HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:12:40] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:12:40] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:12:40] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:12:40] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:12:40] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:12:40] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\QueaNam\\PycharmProjects\\Service-Oriented-Term-Project\\views\\menus.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 286-773-444
+INFO:werkzeug: * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): local:8000
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:13:00] "GET /menu/api_run HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:13:00] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:13:00] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:13:00] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:13:01] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:13:01] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\QueaNam\\PycharmProjects\\Service-Oriented-Term-Project\\views\\menus.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 286-773-444
+INFO:werkzeug: * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LostGoodsInfoInqireService/getLostGoodsInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&pageNo=1&numOfRows=10 HTTP/1.1" 200 966
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LostGoodsInfoInqireService/getLostGoodsDetailInfo?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&ATC_ID=L2019121600000031 HTTP/1.1" 200 582
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LosfundInfoInqireService/getLosfundInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&PRDT_NM=%EC%A7%80%EA%B0%91&DEP_PLACE=%EB%B2%94%EA%B3%84%ED%8C%8C%EC%B6%9C%EC%86%8C&pageNo=1&numOfRows=10 HTTP/1.1" 200 898
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LosfundInfoInqireService/getLosfundInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&PRDT_NM=%EC%A7%80%EA%B0%91&DEP_PLACE=%EB%B2%94%EA%B3%84%ED%8C%8C%EC%B6%9C%EC%86%8C&pageNo=2&numOfRows=10 HTTP/1.1" 200 528
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:13:26] "GET /api/lostInfo HTTP/1.1" 500 -
+DEBUG:urllib3.connectionpool:http://localhost:8000 "GET /api/lostInfo HTTP/1.1" 500 None
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:13:26] "GET /menu/api_run HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:13:26] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:13:26] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:13:26] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:13:27] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:13:27] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:13:27] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LostGoodsInfoInqireService/getLostGoodsInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&pageNo=1&numOfRows=10 HTTP/1.1" 200 966
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LostGoodsInfoInqireService/getLostGoodsDetailInfo?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&ATC_ID=L2019121600000031 HTTP/1.1" 200 582
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LosfundInfoInqireService/getLosfundInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&PRDT_NM=%EC%A7%80%EA%B0%91&DEP_PLACE=%EB%B2%94%EA%B3%84%ED%8C%8C%EC%B6%9C%EC%86%8C&pageNo=1&numOfRows=10 HTTP/1.1" 200 898
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LosfundInfoInqireService/getLosfundInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&PRDT_NM=%EC%A7%80%EA%B0%91&DEP_PLACE=%EB%B2%94%EA%B3%84%ED%8C%8C%EC%B6%9C%EC%86%8C&pageNo=2&numOfRows=10 HTTP/1.1" 200 528
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:14:14] "GET /api/lostInfo HTTP/1.1" 500 -
+DEBUG:urllib3.connectionpool:http://localhost:8000 "GET /api/lostInfo HTTP/1.1" 500 None
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:14:14] "GET /menu/api_run HTTP/1.1" 200 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:14:15] "GET /menu/static/assets/js/core/jquery.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:14:15] "GET /menu/static/assets/js/core/popper.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:14:15] "GET /menu/static/assets/js/core/bootstrap-material-design.min.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:14:15] "GET /menu/static/assets/js/plugins/perfect-scrollbar.jquery.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:14:15] "GET /menu/static/assets/js/plugins/chartist.min.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:14:15] "GET /menu/static/assets/js/plugins/bootstrap-notify.js HTTP/1.1" 404 -
+ERROR:app:404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:14:15] "GET /menu/static/assets/js/material-dashboard.js?v=2.1.1 HTTP/1.1" 404 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\QueaNam\\PycharmProjects\\Service-Oriented-Term-Project\\views\\menus.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 286-773-444
+INFO:werkzeug: * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LostGoodsInfoInqireService/getLostGoodsInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&pageNo=1&numOfRows=10 HTTP/1.1" 200 966
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LostGoodsInfoInqireService/getLostGoodsDetailInfo?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&ATC_ID=L2019121600000031 HTTP/1.1" 200 582
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LosfundInfoInqireService/getLosfundInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&PRDT_NM=%EC%A7%80%EA%B0%91&DEP_PLACE=%EB%B2%94%EA%B3%84%ED%8C%8C%EC%B6%9C%EC%86%8C&pageNo=1&numOfRows=10 HTTP/1.1" 200 898
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LosfundInfoInqireService/getLosfundInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&PRDT_NM=%EC%A7%80%EA%B0%91&DEP_PLACE=%EB%B2%94%EA%B3%84%ED%8C%8C%EC%B6%9C%EC%86%8C&pageNo=2&numOfRows=10 HTTP/1.1" 200 528
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:17:57] "GET /api/lostInfo HTTP/1.1" 500 -
+DEBUG:urllib3.connectionpool:http://localhost:8000 "GET /api/lostInfo HTTP/1.1" 500 None
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:17:57] "GET /menu/api_run HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:17:57] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:17:58] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:17:58] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:17:58] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:17:58] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:17:58] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\QueaNam\\PycharmProjects\\Service-Oriented-Term-Project\\views\\menus.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 286-773-444
+INFO:werkzeug: * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LostGoodsInfoInqireService/getLostGoodsInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&pageNo=1&numOfRows=10 HTTP/1.1" 200 966
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LostGoodsInfoInqireService/getLostGoodsDetailInfo?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&ATC_ID=L2019121600000031 HTTP/1.1" 200 582
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LosfundInfoInqireService/getLosfundInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&PRDT_NM=%EC%A7%80%EA%B0%91&DEP_PLACE=%EB%B2%94%EA%B3%84%ED%8C%8C%EC%B6%9C%EC%86%8C&pageNo=1&numOfRows=10 HTTP/1.1" 200 898
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): apis.data.go.kr:80
+DEBUG:urllib3.connectionpool:http://apis.data.go.kr:80 "GET /1320000/LosfundInfoInqireService/getLosfundInfoAccTpNmCstdyPlace?ServiceKey=%2FRpRLYKrjEbwdsYlZgkvuKZW9wgTRfDhE%2BZyDgf4MzD5OcH5%2Fx92rEl1NDzjnqrHxhcYI1WUjvRfK8n86aSNaw%3D%3D&PRDT_NM=%EC%A7%80%EA%B0%91&DEP_PLACE=%EB%B2%94%EA%B3%84%ED%8C%8C%EC%B6%9C%EC%86%8C&pageNo=2&numOfRows=10 HTTP/1.1" 200 528
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:22:07] "GET /api/lostInfo HTTP/1.1" 500 -
+DEBUG:urllib3.connectionpool:http://localhost:8000 "GET /api/lostInfo HTTP/1.1" 500 None
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:22:07] "GET /menu/api_run HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:22:07] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:22:07] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:22:07] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:22:07] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:22:07] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Dec/2019 01:22:07] "GET /menu/api_run?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
