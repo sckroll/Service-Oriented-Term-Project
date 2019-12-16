@@ -84,7 +84,11 @@ def get_response_and_convert(url, params):
     print(res_item)
     if 'items' in res_item.keys():
         if res_item['items'] is not None:
-            return res_item['items']['item']
+            # 반환 값이 리스트이면 리스트를 리턴, 리스트가 아니면 리스트로 만들어 리턴
+            if type(res_item['items']['item']) == list:
+                return res_item['items']['item']
+            else:
+                return [res_item['items']['item']]
         else:
             return None
     elif 'item' in res_item.keys():
@@ -109,8 +113,6 @@ def lost_search():
     #         -> 분류, 기간별 조회 API를 베이스로 pageNo를 증가시켜가면서
     #         -> LST_PRDT_NM이 lstPrdtNm 문자열 내에 있고 LST_PLACE가 lstPlace 문자열 내에 있는지 검사
     #         -> 만약 lostNumOfRows만큼 찾으면 루프 종료
-    #         But, 이 경우 lostPageNo가 1이 아니라면 어떻게 할 것인가?
-    #         -> lostPageNo를 고정함으로써 해결
 
     # API를 요청하는 데 사용할 파라미터 객체
     params = {}
@@ -133,8 +135,8 @@ def lost_search():
         params['LST_LCT_CD'] = location_to_code(request.args.get('lostPlaceCode'))
 
     # 페이지 번호, 목록 건수 파라미터가 있으면 객체 저장, 없으면 디폴트값을 객체에 저장
-    if request.args.get('lostPageNo') is not None:
-        params['pageNo'] = request.args.get('lostPageNo')
+    if request.args.get('pageNo') is not None:
+        params['pageNo'] = request.args.get('pageNo')
     else:
         params['pageNo'] = 1
     if request.args.get('lostNumOfRows') is not None:
@@ -150,10 +152,10 @@ def lost_search():
     }
     
     # 습득물 목록 건수 파라미터가 있으면 객체 저장, 없으면 디폴트값을 객체에 저장
-    if request.args.get('foundNumOfRows') is not None:
-        result['foundNumOfRows'] = request.args.get('foundNumOfRows')
+    if request.args.get('maxFoundNumOfRows') is not None:
+        result['maxFoundNumOfRows'] = request.args.get('maxFoundNumOfRows')
     else:
-        result['foundNumOfRows'] = FOUND_NUM_OF_ROWS
+        result['maxFoundNumOfRows'] = FOUND_NUM_OF_ROWS
 
     # 분실물 리스트
     lost_goods_list = []
@@ -175,10 +177,11 @@ def lost_search():
             lost_goods_list = get_response_and_convert(lost_search_cd_url, params)
         else:
             # 명칭, 장소별 조회 API 파라미터가 하나라도 채워져있을 때
-            # 단, 여기서 lostPageNo는 1로 고정됨
+            # 단, 여기서 numOfRows는 1000으로 고정한다. (디폴트값인 10으로 유지하면 속도 감소)
 
             page_no = 1
-            max_candidate_num = params['numOfRows']
+            max_candidate_num = int(params['numOfRows'])
+            params['numOfRows'] = 1000
             while True:
                 params['pageNo'] = page_no
                 candidates = get_response_and_convert(lost_search_cd_url, params)
@@ -253,18 +256,19 @@ def lost_search():
         # 정규표현식으로 어절 단위 분리, 각 어절이 포함된 물품 검사 -> 가능하지만 검색 속도 증가
         # 따라서 마지막 어절만 추출, 검색에 활용
 
-        # 습득물 조회를 위한 파라미터 객체
+        # 습득물(경찰서, 포털기관) 조회를 위한 파라미터 객체
         params_found = {
             'PRDT_NM': lost_goods_result['lostProductName'].split(' ')[-1],
             'DEP_PLACE': lost_goods_result['orgName'],
-            'pageNo': 1,
-            'numOfRows': result['foundNumOfRows']
+            'numOfRows': 1000
         }
 
-        # 습득물 조회
+        # 경찰서, 포털기관 습득물 조회 결과(candidate)에서 가져올 아이템 개수
+        max_candidate_num = int(result['maxFoundNumOfRows'])
+
+        # 경찰서 습득물 조회
         print('다음으로 검색:', params_found['PRDT_NM'])
         page_no = 1
-        max_candidate_num = params_found['numOfRows']
         while True:
             if max_candidate_num == 0:
                 break
@@ -276,11 +280,22 @@ def lost_search():
 
             for candidate in candidates:
                 if int(candidate['fdYmd'].replace('-', '')) >= int(lost_goods_result['lostYMD'].replace('-', '')):
-                    matched_goods = {
+                    # 물품분류명을 상위분류명과 하위분류명으로 분리
+                    product_category = candidate['prdtClNm'].split(' > ')
 
+                    # 습득물에 대해 이름을 부여, 분실물에 해당하는 예상 습득물 리스트에 추가
+                    matched_goods = {
+                            'id': candidate['atcId'],
+                            'depPlace': candidate['depPlace'],
+                            'image': candidate['fdFilePathImg'],
+                            'foundProductName': candidate['fdPrdtNm'],
+                            'foundSubject': candidate['fdSbjt'],
+                            'foundYMD': candidate['fdYmd'],
+                            'productCategory': product_category[0],
+                            'productCategorySub': product_category[1],
                     }
 
-                    lost_goods_result['predictedItems'].append(candidate)
+                    lost_goods_result['predictedItems'].append(matched_goods)
                     max_candidate_num -= 1
 
                 if max_candidate_num == 0:
@@ -288,7 +303,7 @@ def lost_search():
 
             page_no += 1
 
-        # 포털기관 조회
+        # 포털기관 습득물 조회
         params_found['DEP_PLACE'] = ''
         page_no = 1
         while True:
@@ -302,7 +317,22 @@ def lost_search():
 
             for candidate in candidates:
                 if int(candidate['fdYmd'].replace('-', '')) >= int(lost_goods_result['lostYMD'].replace('-', '')):
-                    lost_goods_result['predictedItems'].append(candidate)
+                    # 물품분류명을 상위분류명과 하위분류명으로 분리
+                    product_category = candidate['prdtClNm'].split(' > ')
+
+                    # 습득물에 대해 이름을 부여, 분실물에 해당하는 예상 습득물 리스트에 추가
+                    matched_goods = {
+                            'id': candidate['atcId'],
+                            'depPlace': candidate['depPlace'],
+                            'image': candidate['fdFilePathImg'],
+                            'foundProductName': candidate['fdPrdtNm'],
+                            'foundSubject': candidate['fdSbjt'],
+                            'foundYMD': candidate['fdYmd'],
+                            'productCategory': product_category[0],
+                            'productCategorySub': product_category[1],
+                    }
+
+                    lost_goods_result['predictedItems'].append(matched_goods)
                     max_candidate_num -= 1
 
                 if max_candidate_num == 0:
@@ -314,7 +344,7 @@ def lost_search():
         num_of_item += 1
 
     # 리스트 아이템 개수가 lostNumOfRows보다 작다면 lostNumOfRows 갱신
-    if num_of_item < result['lostNumOfRows']:
+    if num_of_item < int(result['lostNumOfRows']):
         result['lostNumOfRows'] = num_of_item
 
     # jsonify()로 리턴하면 한글이 유니코드 문자열로 변환되어서 출력됨
@@ -358,8 +388,8 @@ def found_search():
         params['FD_COL_CD'] = request.args.get('colorCode')
 
     # 페이지 번호, 목록 건수 파라미터가 있으면 객체 저장, 없으면 디폴트값을 객체에 저장
-    if request.args.get('foundPageNo') is not None:
-        params['pageNo'] = request.args.get('foundPageNo')
+    if request.args.get('pageNo') is not None:
+        params['pageNo'] = request.args.get('pageNo')
     else:
         params['pageNo'] = 1
     if request.args.get('foundNumOfRows') is not None:
@@ -399,10 +429,11 @@ def found_search():
             portal_goods_list = get_response_and_convert(portal_search_cd_url, params)
         else:
             # 명칭, 장소별 조회 API 파라미터가 하나라도 채워져있을 때
-            # 단, 여기서 lostPageNo는 1로 고정됨
+            # 단, 여기서 numOfRows는 1000으로 고정한다. (디폴트값인 10으로 유지하면 속도 감소)
 
             page_no = 1
-            max_candidate_num = params['numOfRows']
+            max_candidate_num = int(params['numOfRows'])
+            params['numOfRows'] = 1000
             while True:
                 params['pageNo'] = page_no
                 candidates = get_response_and_convert(found_search_cd_url, params)
@@ -473,7 +504,7 @@ def found_search():
         num_of_item += 1
 
     # 리스트 아이템 개수가 foundNumOfRows보다 작다면 foundNumOfRows 갱신
-    if num_of_item < result['foundNumOfRows']:
+    if num_of_item < int(result['foundNumOfRows']):
         result['foundNumOfRows'] = num_of_item
 
     return json.dumps(result, ensure_ascii=False)
