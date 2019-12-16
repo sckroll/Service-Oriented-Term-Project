@@ -1,31 +1,31 @@
 {% extends 'template.html' %}
 
 {% block content %}
-<form>
+<form action="http://localhost:8000/menu/api_result" method="POST">
     <div class="input-group mb-3">
           <div class="input-group-prepend">
             <span class="input-group-text" id="LostName">분실물 이름</span>
           </div>
-          <input type="text" class="form-control" placeholder="LostName" aria-label="LostName" aria-describedby="LostName">
+          <input type="text" class="form-control" name ="LostName" placeholder="LostName" aria-label="LostName" aria-describedby="LostName">
     </div>
 
     <div class="input-group mb-3">
           <div class="input-group-prepend">
             <span class="input-group-text" id="StartDate">검색 시작 날짜</span>
           </div>
-          <input type="text" class="form-control" placeholder="Search Start date" aria-label="Search Start date" aria-describedby="StartDate">
+          <input type="text" class="form-control" name="StartDate" placeholder="Search Start date" aria-label="Search Start date" aria-describedby="StartDate">
     </div>
     <div class="input-group mb-3">
           <div class="input-group-prepend">
             <span class="input-group-text" id="EndDate">검색 종료 날짜</span>
           </div>
-          <input type="text" class="form-control" placeholder="Search End data" aria-label="Search End data" aria-describedby="EndDate">
+          <input type="text" class="form-control" name="EndDate" placeholder="Search End data" aria-label="Search End data" aria-describedby="EndDate">
     </div>
     <div class="input-group mb-3">
   <div class="input-group-prepend">
     <label class="input-group-text" for="LostRange">분실 범위</label>
       </div>
-      <select class="custom-select" id="LostRange">
+      <select class="custom-select" id="LostRange" name="LostRange">
         <option selected>Choose...</option>
         <option value="서울">서울</option>
         <option value="강원">강원</option>
@@ -52,26 +52,9 @@
           <div class="input-group-prepend">
             <span class="input-group-text" id="LostPlace">분실 장소</span>
           </div>
-          <input type="text" class="form-control" placeholder="LostPlace" aria-label="LostPlace" aria-describedby="LostPlace">
+          <input type="text" class="form-control" name="LostPlace" placeholder="LostPlace" aria-label="LostPlace" aria-describedby="LostPlace">
     </div>
-    <input class="btn btn-primary" type="submit" name="submit_button" value="Submit">
-</form>
-
-<form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
-  <div class="form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+    <input class="btn btn-primary" type="submit" name="submit" value="Submit">
 </form>
 
 {% endblock %}

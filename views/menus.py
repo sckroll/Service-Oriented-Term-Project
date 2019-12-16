@@ -82,16 +82,15 @@ def api_run():
     if res2.status_code == 200:
         foundThings = res2.json()
 
-        for item in foundThings['items']:
+        for item in foundThings['foundItems']:
             pprint.pprint(item)
-
+        for item in foundThings['portalItems']:
+            pprint.pprint(item)
     return render_template(
        'api_run.html',
         nav_menu="api_run",
         lostThings=lostThings,
         foundThings=foundThings,
-        res1 = res1,
-        res2 = res2
     )
 
 
@@ -116,14 +115,15 @@ def api_example():
     #
     # else:
     #    print("Error {0}".format(res1.status_code))
-    form = LostData()
-    if request.method == 'POST':
-        if form.validate_on_submit():
-            print(request.form.display)
-    if request.method == 'GET':
-        if form.validate_on_submit():
-            print(request.form.display)
-
     return render_template(
        'api_example.html', nav_menu="api_example"
     )
+
+@menu_blueprint.route('/api_result', methods=['GET', 'POST'])
+def result():
+    querystring ='?'
+    if request.method == 'POST':
+        result = request.form
+        for key, value in result:
+            querystring += {0}
+        return render_template('api_result.html', nav_menu="api_example", result = result)

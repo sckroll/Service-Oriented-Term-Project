@@ -44,4 +44,4 @@ class LostData(FlaskForm):
     LostRange = f.StringField('LostRange', validators=[DataRequired()])
     LostPlace = f.StringField('LostPlace', validators=[DataRequired()])
 
-    display = ['LostName', 'LostStartDate', LostEndDate, 'LostRange', 'LostPlace']
+    display = ['LostName', 'LostStartDate', 'LostEndDate', 'LostRange', 'LostPlace']

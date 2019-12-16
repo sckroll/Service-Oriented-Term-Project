@@ -1,10 +1,10 @@
 """
 유실물 통합 조회 API
-한국기술교육대학교 서비스지향컴퓨팅및실습 텀 프로젝트
+한국기술교육대학교 서비스지향컴퓨팅및실습 텀 프로젝트 2조
 2014136019 김성찬
 2014136030 김쾌남
 
-이점
+특징
 1. 기존에 분리되어있는 오퍼레이션을 하나로 통합,
    하나의 API에 원하는 파라미터를 전달하는 것 만으로 사용자가 원하는 오퍼레이션을 알아서 수행
 2. 기존 API는 응답을 XML로만 제공하지만, 본 API는 JSON 형식으로 반환하므로
@@ -15,7 +15,6 @@
 4. 분류별, 지역별, 기간별로 유실물을 조회할 경우 해당하는 코드를 알아야 API를 사용할 수 있는 단점 극복
 
 """
-
 
 from flask import Blueprint, json, request, make_response
 from views.code_converter import location_to_code, category_to_code
@@ -56,12 +55,14 @@ LOST_NUM_OF_ROWS = 10
 FOUND_NUM_OF_ROWS = 10
 
 
-# 기능 1. 분실물을 물품명이나 분실 장소, 물품 종류나 신고 날짜로 검색 시
-#         예상되는 습득물의 상세 정보를 리스트로 출력
-#         (분실물의 분실 장소 혹은 색상과 일치하는 신고 날짜 이후의 습득물 리스트)
-#         (명칭, 장소별 / 분류, 기간별로 분리된 API를 하나로 통합)
 @api_blueprint.route('/lostInfo')
 def lost_search():
+    """ 기능 1.
+        분실물을 물품명이나 분실 장소, 물품 종류나 신고 날짜로 검색 시
+        예상되는 습득물의 상세 정보를 리스트로 출력
+        (분실물의 분실 장소 혹은 색상과 일치하는 신고 날짜 이후의 습득물 리스트)
+        (명칭, 장소별 / 분류, 기간별로 분리된 API를 하나로 통합)
+    """
     # case 1. 명칭, 장소별 / 분류, 기간별 모두 빈 칸일 때
     #         -> 명칭, 장소별 url에 pageNo, numOfRows 파라미터만 전달하여 요청
     # case 2. 명칭, 장소별 파라미터만 채워져있을 때
@@ -165,6 +166,8 @@ def lost_search():
 
                     if max_candidate_num == 0:
                         break
+
+                # 분실물 목록 건수 만큼 선택이 완료되면 루프 종료
                 if max_candidate_num == 0:
                     break
                 else:
@@ -209,7 +212,7 @@ def lost_search():
         if 'clrNm' in details_result.keys():
             lost_goods_result['color'] = details_result['clrNm']
 
-        # 1. 찾은 날짜 > 잃어버린 날짜
+        # 1. 찾은 날짜 > 잃어버린 날짜 (날짜가 같을 경우 발견한 시간 > 잃어버린 시간)
         # 2. 보관 중인 장소 = 신고한 장소, else 잃어버린 장소 근처 포털기관 위치
         # 참고: 찾은 물품 = 잃어버린 물품 -> 검색이 잘 안됨
         # 정규표현식으로 어절 단위 분리, 각 어절이 포함된 물품 검사 -> 가능하지만 검색 속도 증가
@@ -226,9 +229,10 @@ def lost_search():
         max_candidate_num = int(result['maxFoundNumOfRows'])
 
         # 경찰서 습득물 조회
-        #print('다음으로 검색:', params_found['PRDT_NM'])
+        # print('다음으로 검색:', params_found['PRDT_NM'])
         page_no = 1
         while True:
+            # 분실물 목록 건수 만큼 선택이 완료되면 루프 종료
             if max_candidate_num == 0:
                 break
 
@@ -239,7 +243,6 @@ def lost_search():
 
             for candidate in candidates:
                 if 'fdYmd' not in candidate.keys():
-                    # 습득물 상세정보 리스트 아이템 객체
                     matched_goods = get_found_item(candidate, found_detail_url)
                     if matched_goods is None:
                         matched_goods = get_found_item(candidate, None)
@@ -247,14 +250,24 @@ def lost_search():
                     lost_goods_result['predictedItems'].append(matched_goods)
                     max_candidate_num -= 1
                 else:
-                    if int(candidate['fdYmd'].replace('-', '')) >= int(lost_goods_result['lostYMD'].replace('-', '')):
-                        # 습득물 상세정보 리스트 아이템 객체
+                    if int(candidate['fdYmd'].replace('-', '')) > int(lost_goods_result['lostYMD'].replace('-', '')):
+                        # 습득물을 찾은 날이 분실물을 잃어버린 날보다 나중일 경우에만 리스트에 추가
                         matched_goods = get_found_item(candidate, found_detail_url)
                         if matched_goods is None:
                             matched_goods = get_found_item(candidate, None)
 
                         lost_goods_result['predictedItems'].append(matched_goods)
                         max_candidate_num -= 1
+                    elif int(candidate['fdYmd'].replace('-', '')) == int(lost_goods_result['lostYMD'].replace('-', '')):
+                        # 만약 찾은 날과 잃어버린 날이 같을 경우 습득물을 찾은 시간이 잃어버린 날보다 나중일 경우에만 추가
+                        if 'fdHor' in candidate.keys():
+                            if int(candidate['fdHor']) >= int(lost_goods_result['lostHour']):
+                                matched_goods = get_found_item(candidate, found_detail_url)
+                                if matched_goods is None:
+                                    matched_goods = get_found_item(candidate, None)
+
+                                lost_goods_result['predictedItems'].append(matched_goods)
+                                max_candidate_num -= 1
 
                 if max_candidate_num == 0:
                     break
@@ -265,6 +278,7 @@ def lost_search():
         params_found['DEP_PLACE'] = ''
         page_no = 1
         while True:
+            # 분실물 목록 건수 만큼 선택이 완료되면 루프 종료
             if max_candidate_num == 0:
                 break
 
@@ -275,7 +289,6 @@ def lost_search():
 
             for candidate in candidates:
                 if 'fdYmd' not in candidate.keys():
-                    # 습득물 상세정보 리스트 아이템 객체
                     matched_goods = get_found_item(candidate, portal_detail_url)
                     if matched_goods is None:
                         matched_goods = get_found_item(candidate, None)
@@ -283,14 +296,24 @@ def lost_search():
                     lost_goods_result['predictedItems'].append(matched_goods)
                     max_candidate_num -= 1
                 else:
-                    if int(candidate['fdYmd'].replace('-', '')) >= int(lost_goods_result['lostYMD'].replace('-', '')):
-                        # 습득물 상세정보 리스트 아이템 객체
+                    if int(candidate['fdYmd'].replace('-', '')) > int(lost_goods_result['lostYMD'].replace('-', '')):
+                        # 습득물을 찾은 날이 분실물을 잃어버린 날보다 나중일 경우에만 리스트에 추가
                         matched_goods = get_found_item(candidate, portal_detail_url)
                         if matched_goods is None:
                             matched_goods = get_found_item(candidate, None)
 
                         lost_goods_result['predictedItems'].append(matched_goods)
                         max_candidate_num -= 1
+                    elif int(candidate['fdYmd'].replace('-', '')) == int(lost_goods_result['lostYMD'].replace('-', '')):
+                        # 만약 찾은 날과 잃어버린 날이 같을 경우 습득물을 찾은 시간이 잃어버린 날보다 나중일 경우에만 추가
+                        if 'fdHor' in candidate.keys():
+                            if int(candidate['fdHor']) >= int(lost_goods_result['lostHour']):
+                                matched_goods = get_found_item(candidate, portal_detail_url)
+                                if matched_goods is None:
+                                    matched_goods = get_found_item(candidate, None)
+
+                                lost_goods_result['predictedItems'].append(matched_goods)
+                                max_candidate_num -= 1
 
                 if max_candidate_num == 0:
                     break
@@ -306,19 +329,22 @@ def lost_search():
 
     # jsonify()로 리턴하면 한글이 유니코드 문자열로 변환되어서 출력됨
     # https://soooprmx.com/archives/6788
-    #return jsonify(result)
-    #return json.dumps(result, ensure_ascii=False)
+    # return jsonify(result)
+    # return json.dumps(result, ensure_ascii=False)
     response = make_response(json.dumps(result, ensure_ascii=False))
     response.headers['Content-Type'] = 'application/json;charset=UTF-8'
+    response.headers['mimetype'] = 'application/json'
     return response
 
 
-# 기능 2. 습득물을 물품명이나 습득 장소로 검색 시
-#         경찰서 뿐만 아니라 포털기관(지하철, 쇼핑몰 등)에서
-#         습득한 물품을 통합해서 상세 정보를 리스트로 출력
-#         (기존 API와는 다르게 습득물 및 포털기관 검색 결과를 통합하여 제공)
 @api_blueprint.route('/foundInfo')
 def found_search():
+    """ 기능 2.
+        습득물을 물품명이나 습득 장소로 검색 시
+        경찰서 뿐만 아니라 포털기관(지하철, 쇼핑몰 등)에서
+        습득한 물품을 통합해서 상세 정보를 리스트로 출력
+        (기존 API와는 다르게 습득물 및 포털기관 검색 결과를 통합하여 제공)
+    """
     # 명칭, 장소별 / 분류, 기간별 조회는 기능 1과 동일
     # 단, 경찰서(지구대) 습득물과 포털기관(지하철, 백화점 등) 습득물을 모두 출력해야 함
 
@@ -460,10 +486,11 @@ def found_search():
     # (foundNumOfRows보다 작을 경우 foundNumOfRows 대신 들어갈 값)
     num_of_item = 0
 
-    # 각 습득물의 상세정보를 리스트에 저장
+    # 각 경찰서 습득물의 상세정보를 리스트에 저장
     for item in found_goods_list:
-        # 습득물 상세정보 리스트 아이템 객체
         found_goods_result = get_found_item(item, found_detail_url)
+        if found_goods_result is None:
+            found_goods_result = get_found_item(item, None)
 
         result['foundItems'].append(found_goods_result)
         num_of_item += 1
@@ -472,12 +499,14 @@ def found_search():
     if num_of_item < int(result['foundNumOfRows']):
         result['foundNumOfRows'] = num_of_item
 
+    # 습득물 리스트 아이템 개수 초기화
     num_of_item = 0
 
-    # 각 습득물의 상세정보를 리스트에 저장
+    # 각 포털기관 습득물의 상세정보를 리스트에 저장
     for item in portal_goods_list:
-        # 습득물 상세정보 리스트 아이템 객체
         found_goods_result = get_found_item(item, portal_detail_url)
+        if found_goods_result is None:
+            found_goods_result = get_found_item(item, None)
 
         result['portalItems'].append(found_goods_result)
         num_of_item += 1
@@ -486,9 +515,10 @@ def found_search():
     if num_of_item < int(result['portalNumOfRows']):
         result['portalNumOfRows'] = num_of_item
 
-    #return json.dumps(result, ensure_ascii=False)
+    # return json.dumps(result, ensure_ascii=False)
     response = make_response(json.dumps(result, ensure_ascii=False))
     response.headers['Content-Type'] = 'application/json;charset=UTF-8'
+    response.headers['mimetype'] = 'application/json'
     return response
 
 
@@ -516,11 +546,13 @@ def get_response_and_convert(url, params):
     else:
         return None
 
-    #print(res_item)
+    # res_item의 값이 없을 경우 None 리턴
+    # print(res_item)
     if res_item is None:
         return None
 
     # 가지고 있는 속성에 따라 적절하게 리스트 반환
+    # 해당하는 속성이 없다면 None 리턴
     if 'items' in res_item.keys():
         if res_item['items'] is not None:
             # 반환 값이 리스트이면 리스트를 리턴, 리스트가 아니면 리스트로 만들어 리턴
