@@ -1,7 +1,6 @@
 {% extends 'template.html' %}
 
 {% block content %}
-api_result
 <table border = 1>
     {% for key, value in result.items() %}
     <tr>
@@ -11,10 +10,34 @@ api_result
     {% endfor %}
 </table>
 
-
-{% for item in lostThings %}
-    {{ item }} {{ lostThings['item'] }}
-    <div></div>
+{% for lostThing in lostThings['items'] %}
+    {% for key in lostThing %}
+        {% if key ==  'predictedItems' %}
+            <div class="card-columns">
+            {% for predictItem in lostThing[key] %}
+                <div class="card" style="max-width: 24rem;">
+                    <img src={{predictItem['image']}} class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">PredictItem</h5>
+                      <p class="card-text">
+                          {% for key_p in predictItem %}
+                            {{ key_p }} : {{ predictItem[key_p] }}
+                          {% endfor %}
+                      </p>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        {% else %}
+            {{ key }} : {{ lostThing[key] }}
+        {% endif %}
+    {% endfor %}}
 {% endfor %}
+
+
+<form action="http://localhost:8000/menu/api_return" method="POST">
+    <input class="btn btn-primary" type="submit" name="submit" value="Submit">
+</form>
 
 {% endblock %}
