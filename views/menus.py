@@ -63,7 +63,7 @@ def menu_main():
 
 @menu_blueprint.route('/api_run')
 def api_run():
-    querystring = ''
+    querystring = '&{0}={1}' .format('getPredictedItems', 0)
     res1 = requests.get(
        url= LOST_BASE_URL,
        params=querystring
@@ -75,7 +75,7 @@ def api_run():
            pprint.pprint(item)
     else:
        print("Error {0}".format(res1.status_code))
-
+    querystring =''
     res2 = requests.get(
         url= FOUND_BASE_URL,
         params=querystring
@@ -112,16 +112,25 @@ def api_example():
     )
 
 
+@menu_blueprint.route('/api_example2', methods=['GET', 'POST'])
+def api_example2():
+
+    return render_template(
+       'api_example2.html', nav_menu="api_example2"
+    )
+
+
+
 @menu_blueprint.route('/api_result', methods=['GET', 'POST'])
 def result():
-    #querystring ="ServiceKey={0}" .format(service_key)
     querystring = ""
     if request.method == 'POST':
         result = request.form
-
+        p_search = 1
         for key, val in result.items():
             if val == 'on':
-                querystring += '&{0}={1}' .format(key, 1)
+                querystring += '&{0}={1}' .format(key, 0)
+                p_search = 0
             elif val is not None:
                 querystring += '&{0}={1}'.format(key, val)
         print(querystring[:-14])
@@ -137,11 +146,46 @@ def result():
         'api_result.html',
         nav_menu="api_example",
         result = result,
-        lostThings=lostThings
+        lostThings=lostThings,
+        p_search=p_search
     )
+
+
+@menu_blueprint.route('/api_result2', methods=['GET', 'POST'])
+def result2():
+    querystring = ""
+    if request.method == 'POST':
+        result = request.form
+        for key, val in result.items():
+            if val is not None:
+                querystring += '&{0}={1}'.format(key, val)
+        print(querystring[:-14])
+        res1 = requests.get(
+            url=FOUND_BASE_URL,
+            params=querystring[:-14]
+        )
+        if res1.status_code == 200:
+            foundThings = res1.json()
+        for item in foundThings['foundItems']:
+            pprint.pprint(item)
+        for item in foundThings['portalItems']:
+            pprint.pprint(item)
+    return render_template(
+        'api_result2.html',
+        nav_menu="api_example2",
+        result = result,
+        foundThings=foundThings
+    )
+
 
 
 @menu_blueprint.route('/api_return', methods=['GET', 'POST'])
 def api_return():
     if request.method == 'POST':
         return render_template('api_example.html', nav_menu="api_example")
+
+
+@menu_blueprint.route('/api_return2', methods=['GET', 'POST'])
+def api_return2():
+    if request.method == 'POST':
+        return render_template('api_example2.html', nav_menu="api_example2")

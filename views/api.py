@@ -389,8 +389,8 @@ def found_search():
             params['PRDT_CL_CD_01'] = category_to_code(request.args.get('mainCategory'), None)
 
     # 습득 지역명을 코드로 변환
-    if request.args.get('foundPlaceCode') is not None:
-        params['N_FD_LCT_CD'] = location_to_code(request.args.get('foundPlaceCode'))
+    if request.args.get('foundPlaceSiDo') is not None:
+        params['N_FD_LCT_CD'] = location_to_code(request.args.get('foundPlaceSiDo'))
 
     # 색상코드 (경찰서, 포털기관) (미사용)
     # if request.args.get('colorCode') is not None:
