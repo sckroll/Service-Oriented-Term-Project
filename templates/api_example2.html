@@ -1,73 +1,86 @@
 {% extends 'template.html' %}
 
 {% block content %}
-<form action="http://localhost:8000/menu/api_result2" method="POST">
-    <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="LostName">브랜드 이름</span>
-          </div>
-          <input type="text" class="form-control" name ="foundName" placeholder="ex) 구찌, 프라다" aria-label="LostName" aria-describedby="LostName">
-    </div>
-    <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="mainCategory">습득물 이름</span>
-          </div>
-          <input type="text" class="form-control" name ="mainCategory" placeholder="ex) 지갑, 가방" aria-label="mainCategory" aria-describedby="mainCategory">
-    </div>
-    <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="subCategory">세부 사항</span>
-          </div>
-          <input type="text" class="form-control" name ="subCategory" placeholder="ex) 남성용 지갑, 여성용 가방" aria-label="subCategory" aria-describedby="subCategory">
-    </div>
-    <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="StartDate">검색 시작 날짜</span>
-          </div>
-          <input type="text" class="form-control" name="startDate" placeholder="ex) 20190101" aria-label="Search Start date" aria-describedby="StartDate">
-    </div>
-    <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="EndDate">검색 종료 날짜</span>
-          </div>
-          <input type="text" class="form-control" name="endDate" placeholder="ex) 20191218" aria-label="Search End data" aria-describedby="EndDate">
-    </div>
-    <div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <label class="input-group-text" for="LostRange">습득 범위</label>
-      </div>
-      <select class="custom-select" id="LostRange" name="foundPlaceSiDo">
-        <option selected>Choose...</option>
-        <option value="서울">서울</option>
-        <option value="강원">강원</option>
-        <option value="경기">경기</option>
-        <option value="경남">경남</option>
-        <option value="경북">경북</option>
-        <option value="광주">광주</option>
-        <option value="대구">대구</option>
-        <option value="대전">대전</option>
-        <option value="부산">부산</option>
-        <option value="울산">울산</option>
-        <option value="인천">인천</option>
-        <option value="전남">전남</option>
-        <option value="전북">전북</option>
-        <option value="충남">충남</option>
-        <option value="충북">충북</option>
-        <option value="제주">제주</option>
-        <option value="세종">세종</option>
-        <option value="해외">해외</option>
-        <option value="기타">기타...</option>
-      </select>
-    </div>
-    <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="LostPlace">습득 장소</span>
-          </div>
-          <input type="text" class="form-control" name="foundPlace" placeholder="ex) 지하철, 노상" aria-label="lostPlace" aria-describedby="lostPlace">
-    </div>
+<div class="jumbotron jumbotron-fluid bg-dark">
+    <h2 class="text-center nanum bold text-white mt-5">API 예시</h2>
+    <h4 class="text-center nanum text-white">서비스 URL에 파라미터를 전달하여 API가 어떤 식으로 동작하는지 알 수 있습니다.</h4>
+</div>
 
+<div class="content">
+    <div class="container">
+        <form action="http://localhost:8000/menu/api_result2" method="POST">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="LostName">브랜드 이름</span>
+                </div>
+                <input type="text" class="form-control" name="foundName" placeholder="ex) 구찌, 프라다" aria-label="LostName"
+                       aria-describedby="LostName">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="mainCategory">습득물 이름</span>
+                </div>
+                <input type="text" class="form-control" name="mainCategory" placeholder="ex) 지갑, 가방"
+                       aria-label="mainCategory" aria-describedby="mainCategory">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="subCategory">세부 사항</span>
+                </div>
+                <input type="text" class="form-control" name="subCategory" placeholder="ex) 남성용 지갑, 여성용 가방"
+                       aria-label="subCategory" aria-describedby="subCategory">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="StartDate">검색 시작 날짜</span>
+                </div>
+                <input type="text" class="form-control" name="startDate" placeholder="ex) 20190101"
+                       aria-label="Search Start date" aria-describedby="StartDate">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="EndDate">검색 종료 날짜</span>
+                </div>
+                <input type="text" class="form-control" name="endDate" placeholder="ex) 20191218"
+                       aria-label="Search End data" aria-describedby="EndDate">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="LostRange">습득 범위</label>
+                </div>
+                <select class="custom-select" id="LostRange" name="foundPlaceSiDo">
+                    <option selected>Choose...</option>
+                    <option value="서울">서울</option>
+                    <option value="강원">강원</option>
+                    <option value="경기">경기</option>
+                    <option value="경남">경남</option>
+                    <option value="경북">경북</option>
+                    <option value="광주">광주</option>
+                    <option value="대구">대구</option>
+                    <option value="대전">대전</option>
+                    <option value="부산">부산</option>
+                    <option value="울산">울산</option>
+                    <option value="인천">인천</option>
+                    <option value="전남">전남</option>
+                    <option value="전북">전북</option>
+                    <option value="충남">충남</option>
+                    <option value="충북">충북</option>
+                    <option value="제주">제주</option>
+                    <option value="세종">세종</option>
+                    <option value="해외">해외</option>
+                    <option value="기타">기타...</option>
+                </select>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="LostPlace">습득 장소</span>
+                </div>
+                <input type="text" class="form-control" name="foundPlace" placeholder="ex) 지하철, 노상"
+                       aria-label="lostPlace" aria-describedby="lostPlace">
+            </div>
 
-    <input class="btn btn-primary" type="submit" name="submit" value="Submit">
-</form>
-
+            <input class="btn btn-primary" type="submit" name="submit" value="Submit">
+        </form>
+    </div>
+</div>
 {% endblock %}
