@@ -42,7 +42,7 @@
             <div class="card">
                 <img src={{item['image']}} class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">FoundItem</h5>
+                    <h5 class="card-title">PortalItem</h5>
                     <p class="card-text">보관 장소  :  {{ item['depPlace'] }}</p>
                     <p class="card-text">발견 장소  :  {{ item['foundPlace'] }}</p>
                     <p class="card-text">보관품  :  {{ item['foundProductName'] }}</p>
@@ -59,7 +59,7 @@
         </div>
 
         <form action="/menu/api_return2" method="POST">
-            <input class="btn btn-primary" type="submit" name="submit" value="Submit">
+            <input class="btn btn-info" type="submit" name="submit" value="이전">
         </form>
     </div>
 </div>

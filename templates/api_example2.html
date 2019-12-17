@@ -2,13 +2,13 @@
 
 {% block content %}
 <div class="jumbotron jumbotron-fluid bg-dark">
-    <h2 class="text-center nanum bold text-white mt-5">API 예시</h2>
-    <h4 class="text-center nanum text-white">서비스 URL에 파라미터를 전달하여 API가 어떤 식으로 동작하는지 알 수 있습니다.</h4>
+    <h2 class="text-center nanum bold text-white mt-5">습득물 조회</h2>
+    <h4 class="text-center nanum text-white">경찰청 산하 기관과 포털기관(공항, 지하철, 놀이공원 등)에서 습득한 유실물의 목록을 조회합니다.</h4>
 </div>
 
 <div class="content">
     <div class="container">
-        <form action="/menu/api_result2" method="POST">
+        <form action="/menu/api_result2" method="POST" class="mt-5">
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="LostName">브랜드 이름</span>
@@ -49,7 +49,7 @@
                     <label class="input-group-text" for="LostRange">습득 범위</label>
                 </div>
                 <select class="custom-select" id="LostRange" name="foundPlaceSiDo">
-                    <option selected>Choose...</option>
+                    <option value="" selected>Choose...</option>
                     <option value="서울">서울</option>
                     <option value="강원">강원</option>
                     <option value="경기">경기</option>
@@ -79,7 +79,7 @@
                        aria-label="lostPlace" aria-describedby="lostPlace">
             </div>
 
-            <input class="btn btn-primary" type="submit" name="submit" value="Submit">
+            <input class="btn btn-info" type="submit" name="submit" value="조회">
         </form>
     </div>
 </div>

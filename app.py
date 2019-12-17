@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 from flask_restful import Api
+import logging
 
 from views.menus import menu_blueprint
 from views.api import api_blueprint
@@ -25,6 +26,9 @@ def hello_world():
 
 
 if __name__ == '__main__':
+    # 로그로 남기기 위해 filename='test.log' parameter로 넘길 것
+    logging.basicConfig(filename='test.log', level=logging.DEBUG)
+
     # AWS에 배포할 때에는 application.debug를 False로 바꿀 것
     application.debug = True
     application.run(host="0.0.0.0", port="8000")
