@@ -1,59 +1,66 @@
 {% extends 'template.html' %}
 
 {% block content %}
-
-<div class="alert alert-light" role="alert">
-  <h4 class="alert-heading">Found Option</h4>
-      {% for key, value in result.items() %}
-        <p>{{ key }} : {{ value }}</p>
-      {% endfor %}
-  <hr>
-  <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+<div class="jumbotron jumbotron-fluid bg-dark">
+    <h2 class="text-center nanum bold text-white mt-5">API 예시</h2>
+    <h4 class="text-center nanum text-white">서비스 URL에 파라미터를 전달하여 API가 어떤 식으로 동작하는지 알 수 있습니다.</h4>
 </div>
 
-<div class="card-columns">
-{% for item in foundThings['foundItems'] %}
-    <div class="card">
-        <img src={{item['image']}} class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">FoundItem</h5>
-            <p class="card-text">보관 장소  :  {{ item['depPlace'] }}</p>
-            <p class="card-text">발견 장소  :  {{ item['foundPlace'] }}</p>
-            <p class="card-text">보관품  :  {{ item['foundProductName'] }}</p>
-            <p class="card-text">발견 시각  :  {{ item['foundYMD'] }}</p>
-            <p class="card-text">분실물 이름  :  {{ item['productCategory'] }}</p>
-            <p class="card-text">세부 사항  :  {{ item['productCategorySub'] }}</p>
-            <p class="card-text">tel  :  {{ item['tel'] }}</p>
-            <p class="card-text">특이사항  :  {{ item['uniq'] }}</p>
-            <a href="#" class="card-actions">detail</a>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+<div class="content">
+    <div class="container">
+        <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading">Found Option</h4>
+            {% for key, value in result.items() %}
+            <p>{{ key }} : {{ value }}</p>
+            {% endfor %}
+            <hr>
+            <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
         </div>
-    </div>
-{% endfor %}
-</div>
-<div class="card-columns">
-{% for item in foundThings['portalItems'] %}
-    <div class="card">
-        <img src={{item['image']}} class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">FoundItem</h5>
-            <p class="card-text">보관 장소  :  {{ item['depPlace'] }}</p>
-            <p class="card-text">발견 장소  :  {{ item['foundPlace'] }}</p>
-            <p class="card-text">보관품  :  {{ item['foundProductName'] }}</p>
-            <p class="card-text">발견 시각  :  {{ item['foundYMD'] }}</p>
-            <p class="card-text">분실물 이름  :  {{ item['productCategory'] }}</p>
-            <p class="card-text">세부 사항  :  {{ item['productCategorySub'] }}</p>
-            <p class="card-text">tel  :  {{ item['tel'] }}</p>
-            <p class="card-text">특이사항  :  {{ item['uniq'] }}</p>
-            <a href="#" class="card-actions">detail</a>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
+        <div class="card-columns">
+            {% for item in foundThings['foundItems'] %}
+            <div class="card">
+                <img src={{item['image']}} class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">FoundItem</h5>
+                    <p class="card-text">보관 장소 : {{ item['depPlace'] }}</p>
+                    <p class="card-text">발견 장소 : {{ item['foundPlace'] }}</p>
+                    <p class="card-text">보관품 : {{ item['foundProductName'] }}</p>
+                    <p class="card-text">발견 시각 : {{ item['foundYMD'] }}</p>
+                    <p class="card-text">분실물 이름 : {{ item['productCategory'] }}</p>
+                    <p class="card-text">세부 사항 : {{ item['productCategorySub'] }}</p>
+                    <p class="card-text">tel : {{ item['tel'] }}</p>
+                    <p class="card-text">특이사항 : {{ item['uniq'] }}</p>
+                    <a href="#" class="card-actions">detail</a>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+            {% endfor %}
         </div>
+        <div class="card-columns">
+            {% for item in foundThings['portalItems'] %}
+            <div class="card">
+                <img src={{item['image']}} class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">FoundItem</h5>
+                    <p class="card-text">보관 장소 : {{ item['depPlace'] }}</p>
+                    <p class="card-text">발견 장소 : {{ item['foundPlace'] }}</p>
+                    <p class="card-text">보관품 : {{ item['foundProductName'] }}</p>
+                    <p class="card-text">발견 시각 : {{ item['foundYMD'] }}</p>
+                    <p class="card-text">분실물 이름 : {{ item['productCategory'] }}</p>
+                    <p class="card-text">세부 사항 : {{ item['productCategorySub'] }}</p>
+                    <p class="card-text">tel : {{ item['tel'] }}</p>
+                    <p class="card-text">특이사항 : {{ item['uniq'] }}</p>
+                    <a href="#" class="card-actions">detail</a>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <form action="http://localhost:8000/menu/api_return2" method="POST">
+            <input class="btn btn-primary" type="submit" name="submit" value="Submit">
+        </form>
     </div>
-{% endfor %}
 </div>
-
-<form action="http://localhost:8000/menu/api_return2" method="POST">
-    <input class="btn btn-primary" type="submit" name="submit" value="Submit">
-</form>
-
 {% endblock %}
