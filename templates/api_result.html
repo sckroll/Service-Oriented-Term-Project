@@ -10,4 +10,11 @@ api_result
     </tr>
     {% endfor %}
 </table>
+
+
+{% for item in lostThings %}
+    {{ item }} {{ lostThings['item'] }}
+    <div></div>
+{% endfor %}
+
 {% endblock %}

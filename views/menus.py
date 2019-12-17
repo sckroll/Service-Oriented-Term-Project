@@ -4,6 +4,7 @@ import pprint
 
 from forms import LostData
 from keys import KAKAO_REST_KEY
+from views.api import service_key
 
 KAKAO_BASE_URL = 'https://dapi.kakao.com'
 headers = {'Authorization': 'KakaoAK ' + KAKAO_REST_KEY}
@@ -121,9 +122,18 @@ def api_example():
 
 @menu_blueprint.route('/api_result', methods=['GET', 'POST'])
 def result():
-    querystring ='?'
+    querystring ='ServiceKey={0}'.format(service_key)
     if request.method == 'POST':
         result = request.form
-        for key, value in result:
-            querystring += {0}
-        return render_template('api_result.html', nav_menu="api_example", result = result)
+        for key, val in result.items():
+            if val is not None:
+                querystring += '&{0}={1}'.format(key, val)
+        res1 = requests.get(
+            url=LOST_BASE_URL,
+            params=querystring
+        )
+        if res1.status_code == 200:
+            lostThings = res1.json()
+    return render_template(
+        'api_result.html', nav_menu="api_example", result = result, lostThings=lostThings
+    )

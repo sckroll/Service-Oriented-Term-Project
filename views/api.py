@@ -6,10 +6,10 @@
 
 특징
 1. 기존에 분리되어있는 오퍼레이션을 하나로 통합,
-   하나의 API에 원하는 파라미터를 전달하는 것 만으로 사용자가 원하는 오퍼레이션을 알아서 수행
+   하나의 API에 원하는 파라미터를 전달하는 것만으로 사용자가 원하는 오퍼레이션을 알아서 수행
 2. 기존 API는 응답을 XML로만 제공하지만, 본 API는 JSON 형식으로 반환하므로
    공공데이터포털 OPEN API의 대체품으로 사용 가능
-3. 특히 경찰청에 온/오프라인으로 신고한 분실물의 경우 경찰서 뿐만 아니라
+3. 특히 경찰청에 온/오프라인으로 신고한 분실물의 경우 경찰서뿐만 아니라
    포털기관(지하철, 백화점 등)에서 습득한 유실물 중 유사한 물품을 리스트로 제공,
    별도로 2개 이상의 API를 사용하여 조회할 필요가 없음
 4. 분류별, 지역별, 기간별로 유실물을 조회할 경우 해당하는 코드를 알아야 API를 사용할 수 있는 단점 극복
@@ -90,9 +90,9 @@ def lost_search():
         # 유실물 분류명을 코드로 변환 (상위분류, 하위분류 파라미터가 모두 채워져 있을 경우에만)
         params['PRDT_CL_CD_01'], params['PRDT_CL_CD_02'] = \
             category_to_code(request.args.get('mainCategory'), request.args.get('subCategory'))
-    if request.args.get('lostPlaceCode') is not None:
+    if request.args.get('lostPlaceSiDo') is not None:
         # 분실 지역명을 코드로 변환
-        params['LST_LCT_CD'] = location_to_code(request.args.get('lostPlaceCode'))
+        params['LST_LCT_CD'] = location_to_code(request.args.get('lostPlaceSiDo'))
 
     # 페이지 번호, 목록 건수 파라미터가 있으면 객체 저장, 없으면 디폴트값을 객체에 저장
     if request.args.get('pageNo') is not None:
