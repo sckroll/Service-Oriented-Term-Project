@@ -120,7 +120,9 @@ def result():
         result = request.form
 
         for key, val in result.items():
-            if val is not None:
+            if val == 'on':
+                querystring += '&{0}={1}' .format(key, 1)
+            elif val is not None:
                 querystring += '&{0}={1}'.format(key, val)
         print(querystring[:-14])
         res1 = requests.get(

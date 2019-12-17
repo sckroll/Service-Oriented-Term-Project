@@ -13,6 +13,8 @@
    포털기관(지하철, 백화점 등)에서 습득한 유실물 중 유사한 물품을 리스트로 제공,
    별도로 2개 이상의 API를 사용하여 조회할 필요가 없음
 4. 분류별, 지역별, 기간별로 유실물을 조회할 경우 해당하는 코드를 알아야 API를 사용할 수 있는 단점 극복
+5. 분실물 조회의 경우 파라미터에 예상 습득물 매칭 여부 옵션을 추가하여
+   불필요한 쿼리를 방지함 -> 속도 증가
 
 """
 
@@ -80,18 +82,23 @@ def lost_search():
     # 파라미터 입력 여부에 따라 객체에 저장
     if request.args.get('lostPlace') is not None:
         params['LST_PLACE'] = request.args.get('lostPlace')
-    if request.args.get('lostName') is not None:
-        params['LST_PRDT_NM'] = request.args.get('lostName')
+    if request.args.get('brandName') is not None:
+        params['LST_PRDT_NM'] = request.args.get('brandName')
     if request.args.get('startDate') is not None:
         params['START_YMD'] = request.args.get('startDate')
     if request.args.get('endDate') is not None:
         params['END_YMD'] = request.args.get('endDate')
-    if request.args.get('mainCategory') is not None and request.args.get('subCategory') is not None:
-        # 유실물 분류명을 코드로 변환 (상위분류, 하위분류 파라미터가 모두 채워져 있을 경우에만)
-        params['PRDT_CL_CD_01'], params['PRDT_CL_CD_02'] = \
-            category_to_code(request.args.get('mainCategory'), request.args.get('subCategory'))
+
+    # 유실물 분류명을 코드로 변환 (상위분류, 혹은 상위 / 하위분류 파라미터가 모두 채워져 있을 경우에만)
+    if request.args.get('mainCategory') is not None:
+        if request.args.get('subCategory') is not None:
+            params['PRDT_CL_CD_01'], params['PRDT_CL_CD_02'] = \
+                category_to_code(request.args.get('mainCategory'), request.args.get('subCategory'))
+        else:
+            params['PRDT_CL_CD_01'] = category_to_code(request.args.get('mainCategory'), None)
+
+    # 분실 지역명을 코드로 변환
     if request.args.get('lostPlaceSiDo') is not None:
-        # 분실 지역명을 코드로 변환
         params['LST_LCT_CD'] = location_to_code(request.args.get('lostPlaceSiDo'))
 
     # 페이지 번호, 목록 건수 파라미터가 있으면 객체 저장, 없으면 디폴트값을 객체에 저장
@@ -104,6 +111,13 @@ def lost_search():
     else:
         params['numOfRows'] = LOST_NUM_OF_ROWS
 
+    # 예상 습득물 목록 출력 여부 파라미터가 있을 때 1이면 True, 0이면 False
+    # 그 외의 값이나 파라미터 자체가 없을 땐 디폴트 값 True
+    is_get_predicted_items = True
+    if request.args.get('getPredictedItems') is not None:
+        if request.args.get('getPredictedItems') == '0':
+            is_get_predicted_items = False
+
     # 최종적으로 출력할 JSON
     result = {
         'items': [],
@@ -111,11 +125,12 @@ def lost_search():
         'lostNumOfRows': params['numOfRows']
     }
 
-    # 습득물 목록 건수 파라미터가 있으면 객체 저장, 없으면 디폴트값을 객체에 저장
-    if request.args.get('maxFoundNumOfRows') is not None:
-        result['maxFoundNumOfRows'] = request.args.get('maxFoundNumOfRows')
-    else:
-        result['maxFoundNumOfRows'] = FOUND_NUM_OF_ROWS
+    if is_get_predicted_items:
+        # 습득물 목록 건수 파라미터가 있으면 객체 저장, 없으면 디폴트값을 객체에 저장
+        if request.args.get('maxFoundNumOfRows') is not None:
+            result['maxFoundNumOfRows'] = request.args.get('maxFoundNumOfRows')
+        else:
+            result['maxFoundNumOfRows'] = FOUND_NUM_OF_ROWS
 
     # 분실물 리스트
     lost_goods_list = []
@@ -206,119 +221,123 @@ def lost_search():
             'productCategory': product_category[0],
             'productCategorySub': product_category[1],
             'tel': details_result['tel'],
-            'predictedItems': []
         }
         # 응답 결과에 색상코드가 있다면 리스트 아이템 객체에 색상코드 추가
         if 'clrNm' in details_result.keys():
             lost_goods_result['color'] = details_result['clrNm']
 
-        # 1. 찾은 날짜 > 잃어버린 날짜 (날짜가 같을 경우 발견한 시간 > 잃어버린 시간)
-        # 2. 보관 중인 장소 = 신고한 장소, else 잃어버린 장소 근처 포털기관 위치
-        # 참고: 찾은 물품 = 잃어버린 물품 -> 검색이 잘 안됨
-        # 정규표현식으로 어절 단위 분리, 각 어절이 포함된 물품 검사 -> 가능하지만 검색 속도 증가
-        # 따라서 마지막 어절만 추출, 검색에 활용
+        # 예상 습득물 리스트 표시 여부가 True일 경우
+        if is_get_predicted_items:
+            # 1. 찾은 날짜 > 잃어버린 날짜 (날짜가 같을 경우 발견한 시간 > 잃어버린 시간)
+            # 2. 보관 중인 장소 = 신고한 장소, else 잃어버린 장소 근처 포털기관 위치
+            # 참고: 찾은 물품 = 잃어버린 물품 -> 검색이 잘 안됨
+            # 정규표현식으로 어절 단위 분리, 각 어절이 포함된 물품 검사 -> 가능하지만 검색 속도 증가
+            # 따라서 마지막 어절만 추출, 검색에 활용
 
-        # 습득물(경찰서, 포털기관) 조회를 위한 파라미터 객체
-        params_found = {
-            'PRDT_NM': lost_goods_result['lostProductName'].split(' ')[-1],
-            'DEP_PLACE': lost_goods_result['orgName'],
-            'numOfRows': 1000
-        }
+            # 예상 습득물 리스트를 객체에 추가
+            lost_goods_result['predictedItems'] = []
 
-        # 경찰서, 포털기관 습득물 조회 결과(candidate)에서 가져올 아이템 개수
-        max_candidate_num = int(result['maxFoundNumOfRows'])
+            # 습득물(경찰서, 포털기관) 조회를 위한 파라미터 객체
+            params_found = {
+                'PRDT_NM': lost_goods_result['lostProductName'].split(' ')[-1],
+                'DEP_PLACE': lost_goods_result['orgName'],
+                'numOfRows': 1000
+            }
 
-        # 경찰서 습득물 조회
-        # print('다음으로 검색:', params_found['PRDT_NM'])
-        page_no = 1
-        while True:
-            # 분실물 목록 건수 만큼 선택이 완료되면 루프 종료
-            if max_candidate_num == 0:
-                break
+            # 경찰서, 포털기관 습득물 조회 결과(candidate)에서 가져올 아이템 개수
+            max_candidate_num = int(result['maxFoundNumOfRows'])
 
-            params_found['pageNo'] = page_no
-            candidates = get_response_and_convert(found_search_np_url, params_found)
-            if candidates is None:
-                break
+            # 경찰서 습득물 조회
+            # print('다음으로 검색:', params_found['PRDT_NM'])
+            page_no = 1
+            while True:
+                # 분실물 목록 건수 만큼 선택이 완료되면 루프 종료
+                if max_candidate_num == 0:
+                    break
 
-            for candidate in candidates:
-                if 'fdYmd' not in candidate.keys():
-                    matched_goods = get_found_item(candidate, found_detail_url)
-                    if matched_goods is None:
-                        matched_goods = get_found_item(candidate, None)
+                params_found['pageNo'] = page_no
+                candidates = get_response_and_convert(found_search_np_url, params_found)
+                if candidates is None:
+                    break
 
-                    lost_goods_result['predictedItems'].append(matched_goods)
-                    max_candidate_num -= 1
-                else:
-                    if int(candidate['fdYmd'].replace('-', '')) > int(lost_goods_result['lostYMD'].replace('-', '')):
-                        # 습득물을 찾은 날이 분실물을 잃어버린 날보다 나중일 경우에만 리스트에 추가
+                for candidate in candidates:
+                    if 'fdYmd' not in candidate.keys():
                         matched_goods = get_found_item(candidate, found_detail_url)
                         if matched_goods is None:
                             matched_goods = get_found_item(candidate, None)
 
                         lost_goods_result['predictedItems'].append(matched_goods)
                         max_candidate_num -= 1
-                    elif int(candidate['fdYmd'].replace('-', '')) == int(lost_goods_result['lostYMD'].replace('-', '')):
-                        # 만약 찾은 날과 잃어버린 날이 같을 경우 습득물을 찾은 시간이 잃어버린 날보다 나중일 경우에만 추가
-                        if 'fdHor' in candidate.keys():
-                            if int(candidate['fdHor']) >= int(lost_goods_result['lostHour']):
-                                matched_goods = get_found_item(candidate, found_detail_url)
-                                if matched_goods is None:
-                                    matched_goods = get_found_item(candidate, None)
+                    else:
+                        if int(candidate['fdYmd'].replace('-', '')) > int(lost_goods_result['lostYMD'].replace('-', '')):
+                            # 습득물을 찾은 날이 분실물을 잃어버린 날보다 나중일 경우에만 리스트에 추가
+                            matched_goods = get_found_item(candidate, found_detail_url)
+                            if matched_goods is None:
+                                matched_goods = get_found_item(candidate, None)
 
-                                lost_goods_result['predictedItems'].append(matched_goods)
-                                max_candidate_num -= 1
+                            lost_goods_result['predictedItems'].append(matched_goods)
+                            max_candidate_num -= 1
+                        elif int(candidate['fdYmd'].replace('-', '')) == int(lost_goods_result['lostYMD'].replace('-', '')):
+                            # 만약 찾은 날과 잃어버린 날이 같을 경우 습득물을 찾은 시간이 잃어버린 날보다 나중일 경우에만 추가
+                            if 'fdHor' in candidate.keys():
+                                if int(candidate['fdHor']) >= int(lost_goods_result['lostHour']):
+                                    matched_goods = get_found_item(candidate, found_detail_url)
+                                    if matched_goods is None:
+                                        matched_goods = get_found_item(candidate, None)
 
+                                    lost_goods_result['predictedItems'].append(matched_goods)
+                                    max_candidate_num -= 1
+
+                    if max_candidate_num == 0:
+                        break
+
+                page_no += 1
+
+            # 포털기관 습득물 조회
+            params_found['DEP_PLACE'] = ''
+            page_no = 1
+            while True:
+                # 분실물 목록 건수 만큼 선택이 완료되면 루프 종료
                 if max_candidate_num == 0:
                     break
 
-            page_no += 1
+                params_found['pageNo'] = page_no
+                candidates = get_response_and_convert(portal_search_np_url, params_found)
+                if candidates is None:
+                    break
 
-        # 포털기관 습득물 조회
-        params_found['DEP_PLACE'] = ''
-        page_no = 1
-        while True:
-            # 분실물 목록 건수 만큼 선택이 완료되면 루프 종료
-            if max_candidate_num == 0:
-                break
-
-            params_found['pageNo'] = page_no
-            candidates = get_response_and_convert(portal_search_np_url, params_found)
-            if candidates is None:
-                break
-
-            for candidate in candidates:
-                if 'fdYmd' not in candidate.keys():
-                    matched_goods = get_found_item(candidate, portal_detail_url)
-                    if matched_goods is None:
-                        matched_goods = get_found_item(candidate, None)
-
-                    lost_goods_result['predictedItems'].append(matched_goods)
-                    max_candidate_num -= 1
-                else:
-                    if int(candidate['fdYmd'].replace('-', '')) > int(lost_goods_result['lostYMD'].replace('-', '')):
-                        # 습득물을 찾은 날이 분실물을 잃어버린 날보다 나중일 경우에만 리스트에 추가
+                for candidate in candidates:
+                    if 'fdYmd' not in candidate.keys():
                         matched_goods = get_found_item(candidate, portal_detail_url)
                         if matched_goods is None:
                             matched_goods = get_found_item(candidate, None)
 
                         lost_goods_result['predictedItems'].append(matched_goods)
                         max_candidate_num -= 1
-                    elif int(candidate['fdYmd'].replace('-', '')) == int(lost_goods_result['lostYMD'].replace('-', '')):
-                        # 만약 찾은 날과 잃어버린 날이 같을 경우 습득물을 찾은 시간이 잃어버린 날보다 나중일 경우에만 추가
-                        if 'fdHor' in candidate.keys():
-                            if int(candidate['fdHor']) >= int(lost_goods_result['lostHour']):
-                                matched_goods = get_found_item(candidate, portal_detail_url)
-                                if matched_goods is None:
-                                    matched_goods = get_found_item(candidate, None)
+                    else:
+                        if int(candidate['fdYmd'].replace('-', '')) > int(lost_goods_result['lostYMD'].replace('-', '')):
+                            # 습득물을 찾은 날이 분실물을 잃어버린 날보다 나중일 경우에만 리스트에 추가
+                            matched_goods = get_found_item(candidate, portal_detail_url)
+                            if matched_goods is None:
+                                matched_goods = get_found_item(candidate, None)
 
-                                lost_goods_result['predictedItems'].append(matched_goods)
-                                max_candidate_num -= 1
+                            lost_goods_result['predictedItems'].append(matched_goods)
+                            max_candidate_num -= 1
+                        elif int(candidate['fdYmd'].replace('-', '')) == int(lost_goods_result['lostYMD'].replace('-', '')):
+                            # 만약 찾은 날과 잃어버린 날이 같을 경우 습득물을 찾은 시간이 잃어버린 날보다 나중일 경우에만 추가
+                            if 'fdHor' in candidate.keys():
+                                if int(candidate['fdHor']) >= int(lost_goods_result['lostHour']):
+                                    matched_goods = get_found_item(candidate, portal_detail_url)
+                                    if matched_goods is None:
+                                        matched_goods = get_found_item(candidate, None)
 
-                if max_candidate_num == 0:
-                    break
+                                    lost_goods_result['predictedItems'].append(matched_goods)
+                                    max_candidate_num -= 1
 
-            page_no += 1
+                    if max_candidate_num == 0:
+                        break
+
+                page_no += 1
 
         result['items'].append(lost_goods_result)
         num_of_item += 1
@@ -360,18 +379,23 @@ def found_search():
         params['START_YMD'] = request.args.get('startDate')
     if request.args.get('endDate') is not None:
         params['END_YMD'] = request.args.get('endDate')
-    if request.args.get('mainCategory') is not None and request.args.get('subCategory') is not None:
-        # 유실물 분류명을 코드로 변환 (상위분류, 하위분류 파라미터가 모두 채워져 있을 경우에만)
-        params['PRDT_CL_CD_01'], params['PRDT_CL_CD_02'] = \
-            category_to_code(request.args.get('mainCategory'), request.args.get('subCategory'))
+
+    # 유실물 분류명을 코드로 변환 (상위분류, 혹은 상위 / 하위분류 파라미터가 모두 채워져 있을 경우에만)
+    if request.args.get('mainCategory') is not None:
+        if request.args.get('subCategory') is not None:
+            params['PRDT_CL_CD_01'], params['PRDT_CL_CD_02'] = \
+                category_to_code(request.args.get('mainCategory'), request.args.get('subCategory'))
+        else:
+            params['PRDT_CL_CD_01'] = category_to_code(request.args.get('mainCategory'), None)
+
+    # 습득 지역명을 코드로 변환
     if request.args.get('foundPlaceCode') is not None:
-        # 습득 지역명을 코드로 변환
         params['N_FD_LCT_CD'] = location_to_code(request.args.get('foundPlaceCode'))
 
-    # 색상코드 (경찰서, 포털기관)
-    if request.args.get('colorCode') is not None:
-        params['CLR_CD'] = request.args.get('colorCode')
-        params['FD_COL_CD'] = request.args.get('colorCode')
+    # 색상코드 (경찰서, 포털기관) (미사용)
+    # if request.args.get('colorCode') is not None:
+    #     params['CLR_CD'] = request.args.get('colorCode')
+    #     params['FD_COL_CD'] = request.args.get('colorCode')
 
     # 페이지 번호, 목록 건수 파라미터가 있으면 객체 저장, 없으면 디폴트값을 객체에 저장
     if request.args.get('pageNo') is not None:

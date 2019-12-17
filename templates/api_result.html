@@ -1,38 +1,45 @@
 {% extends 'template.html' %}
 
 {% block content %}
-<table border = 1>
-    {% for key, value in result.items() %}
-    <tr>
-        <th> {{ key  }}</th>
-        <td> {{ value }}</td>
-    </tr>
-    {% endfor %}
-</table>
+
+<div class="alert alert-light" role="alert">
+  <h4 class="alert-heading">Lost Option</h4>
+      {% for key, value in result.items() %}
+        <p>{{ key }} : {{ value }}</p>
+      {% endfor %}
+  <hr>
+  <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+</div>
+
 
 {% for lostThing in lostThings['items'] %}
-    {% for key in lostThing %}
-        {% if key ==  'predictedItems' %}
-            <div class="card-columns">
-            {% for predictItem in lostThing[key] %}
-                <div class="card" style="max-width: 24rem;">
-                    <img src={{predictItem['image']}} class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">PredictItem</h5>
-                      <p class="card-text">
+    {% if lostThing['predictedItems']|length > 3 %}
+        {% for key in lostThing %}
+            {% if key ==  'predictedItems' %}
+                <div class="card-columns">
+                {% for predictItem in lostThing[key] %}
+                    <div class="card" style="max-width: 24rem;">
+                        <img src={{predictItem['image']}} class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">PredictItem</h5>
+                          <p class="card-text">
                           {% for key_p in predictItem %}
-                            {{ key_p }} : {{ predictItem[key_p] }}
+                            <p class="card-text">
+                                {{ key_p }}  :  {{ predictItem[key_p] }}
+                            </p>
                           {% endfor %}
-                      </p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                          <a href="#" class="card-actions">detail</a>
+                          </p>
+                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
                     </div>
+                {% endfor %}
                 </div>
-            {% endfor %}
-            </div>
-        {% else %}
-            {{ key }} : {{ lostThing[key] }}
-        {% endif %}
-    {% endfor %}}
+            {% else %}
+                {{ key }} : {{ lostThing[key] }}
+            {% endif %}
+        {% endfor %}}
+    {% endif %}
 {% endfor %}
 
 
