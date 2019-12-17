@@ -1,5 +1,33 @@
 {% extends 'template.html' %}
 
 {% block content %}
-api_home
+<div class="page-header header-filter" data-parallax="true"
+     style="background-image: url('/static/assets/img/city-profile.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 ml-auto mr-auto">
+                <div class="brand text-center">
+                    <h1 class="nanum bold">DACHAZA</h1>
+                    <h3 class="text-center nanum">유실물 통합 조회 서비스</h3>
+                    <br>
+                    <button type="button" onClick="location.href='/menu/api_example'"
+                            class="btn btn-info btn-lg nanum">바로 사용해보기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="main main-raised">
+  <div class="container">
+    <div class="section text-center">
+      <h2 class="nanum normal">분실물을 검색하면<br><strong>예상되는 습득물</strong>을 알려줍니다.</h2>
+        <h4 class="nanum normal mt-5">
+            유실물 통합 조회 서비스 DACHAZA는 경찰청에서 제공하는 분실물정보 조회 서비스,
+            습득물정보 조회 서비스, 포털기관 습득물정보 조회 서비스 API를 이용하여
+            자체적으로 재구성한 REST API를 기반으로 경찰청 산하 기관에 신고한
+        </h4>
+    </div>
+  </div>
+</div>
 {% endblock %}

@@ -1,80 +1,274 @@
 {% extends 'template.html' %}
 
 {% block content %}
-<body>
-    <nav id="navbar-example2" class="navbar navbar-light bg-light">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <ul class="nav nav-pills">
-        <li class="nav-item">
-          <a class="nav-link" href="#fat">@fat</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#mdo">@mdo</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#one">one</a>
-            <a class="dropdown-item" href="#two">two</a>
-            <div role="separator" class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#three">three</a>
-          </div>
-        </li>
-      </ul>
-    </nav>
-    <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
-      <h4 id="fat">@fat</h4>
-      <p>...</p>
-      <h4 id="mdo">@mdo</h4>
-      <p>...</p>
-      <h4 id="one">one</h4>
-      <p>...</p>
-      <h4 id="two">two</h4>
-      <p>...</p>
-      <h4 id="three">three</h4>
-      <p>...</p>
-    </div>
-</body>
-<div class="card-deck">
-  <div class="card">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
+<div class="jumbotron jumbotron-fluid bg-dark">
+    <h2 class="text-center nanum bold text-white mt-5">API 설명서</h2>
+    <h4 class="text-center nanum text-white">유실물 통합 조희 API의 사용 방법을 소개합니다.</h4>
 </div>
-<div class="card">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
+<div class="content">
+    <div class="container">
+        <div class="card card-nav-tabs mt-5">
+            <h3 class="card-header card-header-info nanum bold">분실물 정보 조회 및 예상 습득물 조회 서비스</h3>
+            <div class="card-body text-center">
+                <div class="mt-5">
+                    <h3 class="nanum normal">서비스 URL</h3>
+                    <h4 class="display-4 nanum bold">http://18.233.102.135:8000/api/lostInfo</h4>
+                </div>
+                <div class="mt-5">
+                    <h3 class="nanum normal">요청 파라미터 목록</h3>
+                    <table class="table table-striped">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">항목명 (영문)</th>
+                            <th scope="col">항목명 (한글)</th>
+                            <th scope="col">항목구분</th>
+                            <th scope="col">기본값</th>
+                            <th scope="col">예시</th>
+                            <th scope="col">비고</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">pageNo</th>
+                            <td>페이지 번호</td>
+                            <td>옵션</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">lostNumOfRows</th>
+                            <td>분실물 목록 건수</td>
+                            <td>옵션</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">foundNumOfRows</th>
+                            <td>예상 습득물 최대 목록 건수</td>
+                            <td>옵션</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>getPredictedItems가 0이면 사용하지 않음</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">lostPlaceSiDo</th>
+                            <td>분실장소 (시/도)</td>
+                            <td>옵션</td>
+                            <td>-</td>
+                            <td>서울</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">startDate</th>
+                            <td>검색 시작일</td>
+                            <td>옵션</td>
+                            <td>-</td>
+                            <td>20190101</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">endDate</th>
+                            <td>검색 종료일</td>
+                            <td>옵션</td>
+                            <td>-</td>
+                            <td>20191217</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">mainCategory</th>
+                            <td>분실물 대분류</td>
+                            <td>옵션</td>
+                            <td>-</td>
+                            <td>지갑</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">subCategory</th>
+                            <td>분실물 중분류</td>
+                            <td>옵션</td>
+                            <td>-</td>
+                            <td>남성용 지갑</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">lostPlace</th>
+                            <td>분실장소 (위치)</td>
+                            <td>옵션</td>
+                            <td>-</td>
+                            <td>노상</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">brandName</th>
+                            <td>브랜드명</td>
+                            <td>옵션</td>
+                            <td>-</td>
+                            <td>구찌</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">getPredictedItems</th>
+                            <td>예상 습득물 표시 여부</td>
+                            <td>옵션</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>-</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt-5">
+                    <h3 class="nanum normal">응답 파라미터 목록</h3>
+                    <table class="table table-striped">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">항목명 (영문)</th>
+                            <th scope="col">항목명 (한글)</th>
+                            <th scope="col">항목구분</th>
+                            <th scope="col">기본값</th>
+                            <th scope="col">예시</th>
+                            <th scope="col">비고</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">pageNo</th>
+                            <td>페이지 번호</td>
+                            <td>옵션</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">lostNumOfRows</th>
+                            <td>분실물 목록 건수</td>
+                            <td>옵션</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">foundNumOfRows</th>
+                            <td>예상 습득물 최대 목록 건수</td>
+                            <td>옵션</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>getPredictedItems가 0이면 사용하지 않음</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">lostPlaceSiDo</th>
+                            <td>분실장소 (시/도)</td>
+                            <td>옵션</td>
+                            <td>-</td>
+                            <td>서울</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">startDate</th>
+                            <td>검색 시작일</td>
+                            <td>옵션</td>
+                            <td>-</td>
+                            <td>20190101</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">endDate</th>
+                            <td>검색 종료일</td>
+                            <td>옵션</td>
+                            <td>-</td>
+                            <td>20191217</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">mainCategory</th>
+                            <td>분실물 대분류</td>
+                            <td>옵션</td>
+                            <td>-</td>
+                            <td>지갑</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">subCategory</th>
+                            <td>분실물 중분류</td>
+                            <td>옵션</td>
+                            <td>-</td>
+                            <td>남성용 지갑</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">lostPlace</th>
+                            <td>분실장소 (위치)</td>
+                            <td>옵션</td>
+                            <td>-</td>
+                            <td>노상</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">brandName</th>
+                            <td>브랜드명</td>
+                            <td>옵션</td>
+                            <td>-</td>
+                            <td>구찌</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">getPredictedItems</th>
+                            <td>예상 습득물 표시 여부</td>
+                            <td>옵션</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>-</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="card-deck">
+            <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                        content.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This card has even longer content than the first to show that equal height
+                        action.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This card has even longer content than the first to show that equal height
+                        action.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
