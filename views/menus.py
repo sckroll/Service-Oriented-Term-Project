@@ -61,7 +61,7 @@ def api_manual():
 def api_example():
 
     return render_template(
-       'api_example.html', nav_menu="api_example"
+       'lostSearch.html', nav_menu="api_example"
     )
 
 
@@ -69,7 +69,7 @@ def api_example():
 def api_example2():
 
     return render_template(
-       'api_example2.html', nav_menu="api_example2"
+       'foundSearch.html', nav_menu="api_example2"
     )
 
 
@@ -83,7 +83,7 @@ def result():
             if val == 'on':
                 querystring += '&{0}={1}' .format(key, 0)
                 p_search = 0
-            elif val != '':
+            elif val != "":
                 querystring += '&{0}={1}'.format(key, val)
         print(querystring[:-10])
         res1 = requests.get(
@@ -95,7 +95,7 @@ def result():
         for item in lostThings['items']:
             pprint.pprint(item)
     return render_template(
-        'api_result.html',
+        'lostResult.html',
         nav_menu="api_example",
         result = result,
         lostThings=lostThings,
@@ -123,7 +123,7 @@ def result2():
         for item in foundThings['portalItems']:
             pprint.pprint(item)
     return render_template(
-        'api_result2.html',
+        'foundResult.html',
         nav_menu="api_example2",
         result = result,
         foundThings=foundThings
@@ -133,10 +133,10 @@ def result2():
 @menu_blueprint.route('/api_return', methods=['GET', 'POST'])
 def api_return():
     if request.method == 'POST':
-        return render_template('api_example.html', nav_menu="api_example")
+        return render_template('lostSearch.html', nav_menu="api_example")
 
 
 @menu_blueprint.route('/api_return2', methods=['GET', 'POST'])
 def api_return2():
     if request.method == 'POST':
-        return render_template('api_example2.html', nav_menu="api_example2")
+        return render_template('foundSearch.html', nav_menu="api_example2")
