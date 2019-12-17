@@ -16,39 +16,70 @@
           <hr>
           <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
         </div>
-
-
-        {% for lostThing in lostThings['items'] %}
-            {% if lostThing['predictedItems']|length > 3 %}
-                {% for key in lostThing %}
-                    {% if key ==  'predictedItems' %}
-                        <div class="card-columns">
-                        {% for predictItem in lostThing[key] %}
-                            <div class="card" style="max-width: 24rem;">
-                                <img src={{predictItem['image']}} class="card-img-top" alt="...">
-                                <div class="card-body">
-                                  <h5 class="card-title">PredictItem</h5>
-                                  <p class="card-text">
-                                  {% for key_p in predictItem %}
-                                    <p class="card-text">
-                                        {{ key_p }}  :  {{ predictItem[key_p] }}
-                                    </p>
-                                  {% endfor %}
-                                  <a href="#" class="card-actions">detail</a>
-                                  </p>
-                                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            {% if p_search != 0 %}
+                {% for lostThing in lostThings['items'] %}
+                    {% if lostThing['predictedItems']|length > 3 %}
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row no-gutters">
+                                <div class="col-md-4">
+                                    <img src={{lostThing['image']}} class="card-img" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">LostItem</h5>
+                                        <p class="card-text">색상  :  {{ lostThing['color'] }}</p>
+                                        <p class="card-text">분실범위  :  {{ lostThing['lostLocationName'] }}</p>
+                                        <p class="card-text">분실장소  :  {{ lostThing['lostPlaceSub'] }}</p>
+                                        <p class="card-text">분실물품  :  {{ lostThing['lostProductName'] }}</p>
+                                        <p class="card-text">분실물  :  {{ lostThing['lostSubject'] }}</p>
+                                        <p class="card-text">분실시각  :  {{ lostThing['lostYMD'] }}</p>
+                                    </div>
                                 </div>
                             </div>
-                        {% endfor %}
                         </div>
-                    {% else %}
-                        {{ key }} : {{ lostThing[key] }}
+                        <div class="container-fluid">
+
+                            <div class="card-columns">
+                            {% for predictItem in lostThing['predictedItems'] %}
+                                <div class="card" style="max-width: 20rem;">
+                                    <img src={{predictItem['image']}} class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">PredictItem</h5>
+                                        <p class="card-text">보관 장소  :  {{ predictItem['depPlace'] }}</p>
+                                        <p class="card-text">발견 장소  :  {{ predictItem['foundPlace'] }}</p>
+                                        <p class="card-text">보관품  :  {{ predictItem['foundProductName'] }}</p>
+                                        <p class="card-text">발견 시각  :  {{ predictItem['foundYMD'] }}</p>
+                                        <p class="card-text">분실물 이름  :  {{ predictItem['productCategory'] }}</p>
+                                        <p class="card-text">세부 사항  :  {{ predictItem['productCategorySub'] }}</p>
+                                        <p class="card-text">tel  :  {{ predictItem['tel'] }}</p>
+                                        <p class="card-text">특이사항  :  {{ predictItem['uniq'] }}</p>
+                                        <a href="#" class="card-actions">detail</a>
+                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                            </div>
+                        </div>
                     {% endif %}
-                {% endfor %}}
+                {% endfor %}
+            {% else %}
+                <div class="card-columns">
+                {% for lostThing in lostThings['items'] %}
+                    <div class="card" style="width: 20rem;">
+                        <img src={{lostThing['image']}} class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">LostItem</h5>
+                            <p class="card-text">색상  :  {{ lostThing['color'] }}</p>
+                            <p class="card-text">분실범위  :  {{ lostThing['lostLocationName'] }}</p>
+                            <p class="card-text">분실장소  :  {{ lostThing['lostPlaceSub'] }}</p>
+                            <p class="card-text">분실물품  :  {{ lostThing['lostProductName'] }}</p>
+                            <p class="card-text">분실물  :  {{ lostThing['lostSubject'] }}</p>
+                            <p class="card-text">분실시각  :  {{ lostThing['lostYMD'] }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+                </div>
             {% endif %}
-        {% endfor %}
-
-
         <form action="http://localhost:8000/menu/api_return" method="POST">
             <input class="btn btn-primary" type="submit" name="submit" value="Submit">
         </form>
