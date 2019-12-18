@@ -10,26 +10,52 @@
                     <h1 class="nanum bold">DACHAZA</h1>
                     <h3 class="text-center nanum">유실물 통합 조회 서비스</h3>
                     <br>
-                    <button type="button" onClick="location.href='/menu/api_example'"
-                            class="btn btn-info btn-lg nanum">바로 사용해보기</button>
+                    <button type="button" onClick="location.href='/menu/lost_search'"
+                            class="btn btn-info btn-lg nanum">분실물 조회하기
+                    </button>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="main main-raised">
-  <div class="container">
-    <div class="section text-center">
-      <h2 class="nanum normal">분실물을 검색하면<br><strong>예상되는 습득물</strong>을 알려줍니다.</h2>
-        <h4 class="nanum normal mt-5">
-            유실물 통합 조회 서비스 DACHAZA는 경찰청에서 제공하는 분실물정보 조회 서비스,
-            습득물정보 조회 서비스, 포털기관 습득물정보 조회 서비스 API를 이용하여
-            자체적으로 재구성한 REST API를 기반으로 경찰청 산하 기관에 신고한 분실물을
-            물품 분류명, 날짜, 잃어버린 장소 등을 통해 조회할 수 있습니다.
-            이와 동시에
-        </h4>
+<div class="main main-raised py-5">
+    <div class="container">
+        <div class="section text-center py-5">
+            <h2 class="nanum normal">분실물을 검색하면<br><strong>예상되는 습득물</strong>을 알려줍니다.</h2>
+            <h4 class="nanum normal mt-5">
+                유실물 통합 조회 서비스 DACHAZA는 경찰청에서 제공하는 분실물정보 조회 서비스,
+                습득물정보 조회 서비스, 포털기관 습득물정보 조회 서비스 API를 이용하여
+                자체적으로 재구성한 REST API를 기반으로 경찰청 산하 기관에 신고한 분실물을
+                물품 분류명, 날짜, 잃어버린 장소 등을 통해 조회할 수 있습니다.
+                이와 동시에 분실물로 예상되는 습득물의 목록을 제공합니다.
+            </h4>
+        </div>
+        <div class="section text-center py-5">
+            <h2 class="nanum normal">경찰서 이외에도 <strong>더 많은 장소에서</strong><br>습득물 조회가 가능합니다.</h2>
+            <h4 class="nanum normal mt-5">
+                경찰청에서 제공하는 습득물 조회 API는 경찰청 산하 기구에서 제공하는 API와
+                포털기관(지하철, 백화점, 놀이공원 등)에서 제공하는 API로 분리되어 있습니다.
+                유실물 통합 조회 API를 사용하면 하나의 API로 경찰서와 포털기관의 습득물 목록을
+                동시에 확인할 수 있는 편리함을 누릴 수 있습니다.
+
+            </h4>
+        </div>
+        <div class="section text-center py-5">
+            <h2 class="nanum normal"><strong>기존 API의 불편한 점</strong>을<br>해결할 수 있습니다.</h2>
+            <h4 class="nanum normal mt-5">
+                기존에 제공되는 API는 물품에 대한 분류나 지역으로 유실물 검색을 하기 위해서 해당하는 코드를 알아야 했지만,
+                본 API를 사용하면 지역코드나 물품분류코드를 알 필요 없이 한글로 입력하는 것만으로 조회가 가능합니다.
+            </h4>
+        </div>
+        <div class="section text-center py-5">
+            <h2 class="nanum normal"><strong>JSON 형식</strong>의 REST API를 지원합니다.</h2>
+            <h4 class="nanum normal mt-5">
+                경찰청에서 제공하는 분실물, 습득물 조회 API는 응답 데이터 형식을 오직 XML만 지원합니다.
+                유실물 통합 조회 서비스 API는 JSON 형식으로 API를 제공함으로써,
+                사용자가 불필요하게 JSON으로 변환할 필요가 없습니다.
+            </h4>
+        </div>
     </div>
-  </div>
 </div>
 {% endblock %}

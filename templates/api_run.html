@@ -2,34 +2,34 @@
 
 {% block content %}
 <div class="jumbotron jumbotron-fluid bg-dark">
-        <h2 class="text-center nanum bold text-white mt-5">API 설명서</h2>
-        <h4 class="text-center nanum text-white">유실물 통합 조희 API의 사용 방법을 소개합니다.</h4>
+    <h2 class="text-center nanum bold text-white mt-5">API 테스트</h2>
+    <h4 class="text-center nanum text-white">유실물 통합 조회 API의 응답 메시지 예시를 나타냅니다.</h4>
 </div>
 
 <div class="content">
     <div class="container">
-        <nav id="navbar-example2" class="navbar navbar-light bg-light">
-          <a class="navbar-brand" href="#">Json 에시</a>
-          <ul class="nav nav-pills">
-            <li class="nav-item">
-              <a class="nav-link" href="#LostInfo">LostInfo</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#FoundInfo">FoundInfo</a>
-            </li>
-          </ul>
-
-        <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
-          <h4 id="LostInfo">LostInfo</h4>
-          <p>
-                {{ lostThings }}
-          </p>
-          <h4 id="FoundInfo">FoundInfo</h4>
-          <p>
-                {{ foundThings }}
-          </p>
-        </div>
+        <nav class="nav">
+            <div class="container text-center my-3">
+                <a class="navbar-brand nanum bold text-warning" href="#lostInfo">분실물 정보 조회 및 예상 습득물 조회 서비스</a>
+                <a class="navbar-brand nanum bold text-warning" href="#foundInfo">습득물 통합 조회 서비스</a>
+            </div>
         </nav>
+        <div class="card card-nav-tabs my-5">
+            <h3 class="card-header card-header-info nanum bold" id="lostInfo">분실물 정보 조회 및 예상 습득물 조회 서비스 (lostInfo)</h3>
+            <div class="card-body text-center">
+              <p>
+                    {{ lostThings }}
+              </p>
+            </div>
+        </div>
+        <div class="card card-nav-tabs my-5">
+            <h3 class="card-header card-header-info nanum bold" id="foundInfo">습득물 통합 조회 서비스 (foundInfo)</h3>
+            <div class="card-body text-center">
+              <p>
+                    {{ foundThings }}
+              </p>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}

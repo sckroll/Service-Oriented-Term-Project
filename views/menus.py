@@ -2,12 +2,7 @@ from flask import Blueprint, render_template, request
 import requests
 import pprint
 
-from forms import LostData
-from keys import KAKAO_REST_KEY
 from views.api import service_key
-
-KAKAO_BASE_URL = 'https://dapi.kakao.com'
-headers = {'Authorization': 'KakaoAK ' + KAKAO_REST_KEY}
 
 LOST_BASE_URL = 'http://localhost:8000/api/lostInfo'
 FOUND_BASE_URL = 'http://localhost:8000/api/foundInfo'
@@ -57,24 +52,24 @@ def api_manual():
     )
 
 
-@menu_blueprint.route('/api_example', methods=['GET', 'POST'])
+@menu_blueprint.route('/lost_search', methods=['GET', 'POST'])
 def api_example():
 
     return render_template(
-       'lostSearch.html', nav_menu="api_example"
+       'lost_search.html', nav_menu="lost_search"
     )
 
 
-@menu_blueprint.route('/api_example2', methods=['GET', 'POST'])
+@menu_blueprint.route('/found_search', methods=['GET', 'POST'])
 def api_example2():
 
     return render_template(
-       'foundSearch.html', nav_menu="api_example2"
+       'found_search.html', nav_menu="found_search"
     )
 
 
-@menu_blueprint.route('/api_result', methods=['GET', 'POST'])
-def result():
+@menu_blueprint.route('/lost_result', methods=['GET', 'POST'])
+def lost_result():
     querystring = ""
     if request.method == 'POST':
         result = request.form
@@ -95,16 +90,16 @@ def result():
         for item in lostThings['items']:
             pprint.pprint(item)
     return render_template(
-        'lostResult.html',
-        nav_menu="api_example",
+        'lost_result.html',
+        nav_menu="lost_search",
         result = result,
         lostThings=lostThings,
         p_search=p_search
     )
 
 
-@menu_blueprint.route('/api_result2', methods=['GET', 'POST'])
-def result2():
+@menu_blueprint.route('/found_result', methods=['GET', 'POST'])
+def found_result():
     querystring = ""
     if request.method == 'POST':
         result = request.form
@@ -123,20 +118,20 @@ def result2():
         for item in foundThings['portalItems']:
             pprint.pprint(item)
     return render_template(
-        'foundResult.html',
-        nav_menu="api_example2",
+        'found_result.html',
+        nav_menu="found_search",
         result = result,
         foundThings=foundThings
     )
 
 
-@menu_blueprint.route('/api_return', methods=['GET', 'POST'])
-def api_return():
+@menu_blueprint.route('/lost_return', methods=['GET', 'POST'])
+def lost_return():
     if request.method == 'POST':
-        return render_template('lostSearch.html', nav_menu="api_example")
+        return render_template('lost_search.html', nav_menu="api_example")
 
 
-@menu_blueprint.route('/api_return2', methods=['GET', 'POST'])
-def api_return2():
+@menu_blueprint.route('/found_return', methods=['GET', 'POST'])
+def found_return():
     if request.method == 'POST':
-        return render_template('foundSearch.html', nav_menu="api_example2")
+        return render_template('found_search.html', nav_menu="api_example2")
